@@ -7,7 +7,7 @@ setup(
     packages=find_packages(),
     py_modules = ['app'],
     zip_safe=False,
-    install_requires=['flask', 'flask_sqlalchemy', 'bs4', 'Scrapy', 'python-instagram']
+    install_requires=['flask', 'flask_sqlalchemy', 'bs4', 'Scrapy', 'python-instagram', 'flask_bootstrap']
 )
     '''
     A4 - libraries
@@ -15,4 +15,5 @@ setup(
     Aaron Reyes - bs4
     Ismail Abbas - Scrapy
     Brandon Nguyen - python-instagram
+    Oscar Alcaraz - flask_bootstrap
     '''

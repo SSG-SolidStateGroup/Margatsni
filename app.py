@@ -2,9 +2,10 @@ from flask import *
 from flask_sqlalchemy import *
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
-
+from flask_bootstrap import Bootstrap 
 
 app = Flask(__name__)
+Bootstrap(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///students.sqlite3'
 app.config['SECRET_KEY'] = "random string"
 
@@ -62,6 +63,10 @@ def aaron_soup():
       testList.extend([brand, product_name.replace(",","|"),shipping])
 
    return render_template('aaron_soup.html', name="Aaron", list=testList)   
+
+@app.route('/bootstrap_example')
+def bootstrap_example():
+   return render_template("bootstrap_example.html")
 
 if __name__ == '__main__':
    db.create_all()
