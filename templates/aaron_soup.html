@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang = "en">
+      <h3>
+         <a href = "{{ url_for('show_all') }}">CS480-A4, Calvin Teng</a></br>
+         <a href = "{{ url_for('aaron_soup') }}">CS480-A4, Aaron Reyes</a>
+      </h3>
+<body>
+	{% if name %}
+	  <h1>Hello {{ name }}!</h1>
+	{% else %}
+	  <h1>Hello, World!</h1>
+	{% endif %}
+	{% for item in list %}
+	        {{ item }}
+	{% endfor %}
+</body>
+</html>
