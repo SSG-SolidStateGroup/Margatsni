@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <body>
+   
+      <h3>CS480-A4, Calvin Teng</h3>
+      <hr/>
+      
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div>
+            {{ message }}
+         </div>
+      {%- endfor %}
+      
+      <form action = "{{ request.path }}" method = "post">
+         
+         <label for = "name">Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+
+         <label for = "PIN">City</label><br>
+         <input type = "text" name = "pin" placeholder = "Pin" /><br>
+         
+         <input type = "submit" value = "Submit" />
+      </form>
+      
+   </body>
+</html>
