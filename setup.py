@@ -7,7 +7,11 @@ setup(
     packages=find_packages(),
     py_modules = ['app'],
     zip_safe=False,
-    install_requires=['flask', 'flask_sqlalchemy', 'bs4']
-    #Calvin Teng - flask_sqlalchemy
-    #Aaron Reyes - bs4
+    install_requires=['flask', 'flask_sqlalchemy', 'bs4', 'Scrapy']
 )
+    '''
+    A4 - libraries
+    Calvin Teng - flask_sqlalchemy
+    Aaron Reyes - bs4
+    Ismail Abbas - Scrapy
+    '''
