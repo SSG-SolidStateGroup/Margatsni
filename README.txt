@@ -8,3 +8,6 @@ Members:
 * Oscar Alcaraz
 * Brandon Nguyen
 * Aaron Reyes
+
+Install Requirements for App
+		pip install -r requirements.txt	
