@@ -1,4 +1,4 @@
-from instagram.client import InstagramAPI
+om instagram.client import InstagramAPI
 import pytest
 
 access_token = "1452718484.7aaf07a.512deb47397e4bffb6e18da65f11270e"
@@ -14,13 +14,5 @@ def test_string_equal2():
 	assert get_string() == "([User: oalcaraz.09, User: kellynieh], Noe)"	
 
 def get_string():
-	people_followed = str(api.user_follows())
-	return people_followed
-
-'''
-RUN:
-py.test a6_pytest.py
-
-- Calvin Teng
-
-'''
+	liked_media = str(api.user_follows())
+	return liked_media
