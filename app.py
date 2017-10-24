@@ -1,7 +1,6 @@
 import os
 from instagram.client import InstagramAPI
 from flask import Flask, request, render_template, session, redirect, abort, flash, jsonify
-import requests
 
 app = Flask(__name__)
 app.secret_key = "SUPER SECRET KEY"
