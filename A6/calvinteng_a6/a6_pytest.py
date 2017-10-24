@@ -7,9 +7,11 @@ client_id = "7aaf07aaa882491eb4c73bbdc94fa455"
 
 api = InstagramAPI(access_token=access_token, client_secret=client_secret, client_id=client_id)
 
+#Correct test
 def test_string_equal():
 	assert get_string() == "([User: oalcaraz.09, User: kellynieh], None)"
 
+#FAIL ON PURPOSE
 def test_string_equal2():
 	assert get_string() == "([User: oalcaraz.09, User: kellynieh], Noe)"	
 
