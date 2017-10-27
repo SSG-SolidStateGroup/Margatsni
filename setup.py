@@ -7,7 +7,7 @@ setup(
     packages=find_packages(),
     py_modules = ['app'],
     zip_safe=False,
-    install_requires=['flask', 'flask_sqlalchemy', 'bs4', 'Scrapy', 'python-instagram', 'flask_bootstrap', 'instagram', 'pytest']
+    install_requires=['flask','python-instagram', 'flask_bootstrap', 'instagram', 'pytest']
 	)
 
 '''
