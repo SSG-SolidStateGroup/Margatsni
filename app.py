@@ -15,7 +15,7 @@ api = InstagramAPI(**instaConfig)
 @app.route('/')
 def user_photos():
 	if 'instagram_access_token' in session and 'instagram_user' in session:
-		return "HELLO"
+		return "instagram access_token received" + str(session['instagram_access_token'])
 	else:
 		return redirect('/connect')
 
