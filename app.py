@@ -4,7 +4,6 @@ from flask import Flask, request, render_template, session, redirect, abort, fla
 app = Flask(__name__)
 app.secret_key = "SUPER SECRET KEY"
 
-# System variables found on server's computer
 instaConfig = {
 	'client_id':'7aaf07aaa882491eb4c73bbdc94fa455',
 	'client_secret':'67a95b790d714163bf039758690a9b60',
@@ -15,8 +14,8 @@ api = InstagramAPI(**instaConfig)
 @app.route('/')
 def user_photos():
 	if 'instagram_access_token' in session and 'instagram_user' in session:
-		return "instagram access_token received" + str(session['instagram_access_token'])
-	else:
+		return "hnnnnnnnnnnnnnnnnnng"
+			else:
 		return redirect('/connect')
 
 # Redirect users to Instagram for login
@@ -29,18 +28,17 @@ def connect():
 @app.route('/instagram_callback', methods=['GET', 'POST'])
 def instagram_callback():
 	code = request.args.get('code')
-	app.logger.debug("HELLOOO HOLY SHIT")
+
 	if code:
 		access_token, user = api.exchange_code_for_access_token(code)
 		if not access_token:
 			return 'Could not get access token'
 		
-		app.logger.debug('got an access token')
-		app.logger.debug(access_token)
-
 		# Sessions are used to keep this data 
 		session['instagram_access_token'] = access_token
 		session['instagram_user'] = user
+
+		app.logger.debug(session['instagram_user'])
 
 		return redirect('/') # redirect back to main page
 	else:
