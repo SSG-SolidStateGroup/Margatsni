@@ -9,7 +9,7 @@ app.secret_key = "SUPER SECRET KEY"
 instaConfig = {
 	'client_id':'7aaf07aaa882491eb4c73bbdc94fa455',
 	'client_secret':'67a95b790d714163bf039758690a9b60',
-	'redirect_uri' : 'http://ec2-18-216-137-209.us-east-2.compute.amazonaws.com:8080/instagram_callback'
+	'redirect_uri' : 'http://ec2-18-220-171-220.us-east-2.compute.amazonaws.com:80/instagram_callback'
 }
 api = InstagramAPI(**instaConfig)
 
@@ -48,7 +48,7 @@ def instagram_callback():
 		return "Uhoh no code provided"
 
 if __name__ == "__main__":
-	app.run(port=8080, debug=True)
+	app.run(port=80, debug=True)
 
 '''
 access_token = "1452718484.7aaf07a.512deb47397e4bffb6e18da65f11270e"
