@@ -1,4 +1,3 @@
-import os
 from instagram.client import InstagramAPI
 from flask import Flask, request, render_template, session, redirect, abort, flash, jsonify
 
@@ -9,7 +8,7 @@ app.secret_key = "SUPER SECRET KEY"
 instaConfig = {
 	'client_id':'7aaf07aaa882491eb4c73bbdc94fa455',
 	'client_secret':'67a95b790d714163bf039758690a9b60',
-	'redirect_uri' : 'http://ec2-18-216-95-146.us-east-2.compute.amazonaws.com:80/instagram_callback'
+	'redirect_uri' : 'http://localhost:5000/instagram_callback'
 }
 api = InstagramAPI(**instaConfig)
 
@@ -48,7 +47,7 @@ def instagram_callback():
 		return "Uhoh no code provided"
 
 if __name__ == "__main__":
-	app.run(host='0.0.0.0')
+	app.run(port=80, debug=True)
 
 '''
 access_token = "1452718484.7aaf07a.512deb47397e4bffb6e18da65f11270e"
