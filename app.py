@@ -7,7 +7,7 @@ app.secret_key = "SUPER SECRET KEY"
 instaConfig = {
 	'client_id':'7aaf07aaa882491eb4c73bbdc94fa455',
 	'client_secret':'67a95b790d714163bf039758690a9b60',
-	'redirect_uri' : 'http://ec2-18-216-153-52.us-east-2.compute.amazonaws.com:80/instagram_callback'
+	'redirect_uri' : 'margatsni.xyz:80/instagram_callback'
 
 }
 api = InstagramAPI(**instaConfig)
