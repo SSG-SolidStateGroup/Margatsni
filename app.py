@@ -48,7 +48,7 @@ def instagram_callback():
 		return "Uhoh no code provided"
 
 if __name__ == "__main__":
-	app.run()
+	app.run(host='0.0.0.0')
 
 '''
 access_token = "1452718484.7aaf07a.512deb47397e4bffb6e18da65f11270e"
