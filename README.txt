@@ -12,4 +12,4 @@ Members:
 * Aaron Reyes
 
 Install Requirements for App
-		pip install -r requirements.txt	
+	$ pip install -r requirements.txt	
