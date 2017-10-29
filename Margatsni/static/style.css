@@ -1,12 +1,32 @@
-body {
-    background-color: lightblue;
+a {
+    color: inherit;
+    outline: 0;
 }
+body {
+    /* Instagram violet */
+    background-color: #8a3ab9;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+/* CSS for classes */
 
 .login-menu {
     position: relative;
-    float: right;
+    /*float: right;*/
 }
-
+.logo a {
+    text-decoration: none;
+    border-bottom: none;
+    transition: color .5s;
+}
 .button {
     background-color: #4CAF50;
     border: none;
@@ -18,4 +38,15 @@ body {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+/* CSS for divs */
+
+#header h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 4.35em;
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 1em;
 }
