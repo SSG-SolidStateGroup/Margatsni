@@ -1,6 +1,6 @@
 MARGATSNI
 
-margatsni.xyz (if server is up)
+margatsni.xyz
 
 A web based tool, Margatnsi is being developed by SolidStateGroup as an Instagram Photo Downloading tool.
 
