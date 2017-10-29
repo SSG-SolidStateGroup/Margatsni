@@ -21,10 +21,6 @@ h1 {
 
 /* CSS for classes */
 
-.login-menu {
-    position: relative;
-    /*float: right;*/
-}
 .button {
     background-color: #4CAF50;
     border: none;
@@ -37,10 +33,7 @@ h1 {
     margin: 4px 2px;
     cursor: pointer;
 }
-
-/* CSS for divs */
-
-#header {
+.header {
     display: block;
     font-size: 2em;
     font-weight: bold;
@@ -52,3 +45,9 @@ h1 {
     top: 50%;
     width: 100%;
 }
+.login-menu {
+    position: relative;
+    /*float: right;*/
+}
+
+/* CSS for divs */
