@@ -9,11 +9,14 @@ body {
 h1 {
     display: block;
     font-size: 2em;
-    -webkit-margin-before: 0.67em;
-    -webkit-margin-after: 0.67em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
     font-weight: bold;
+    left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
 }
 
 /* CSS for classes */
@@ -21,11 +24,6 @@ h1 {
 .login-menu {
     position: relative;
     /*float: right;*/
-}
-.logo a {
-    text-decoration: none;
-    border-bottom: none;
-    transition: color .5s;
 }
 .button {
     background-color: #4CAF50;
@@ -41,12 +39,3 @@ h1 {
 }
 
 /* CSS for divs */
-
-#header h1 {
-    padding: 0;
-    margin: 0;
-    font-size: 4.35em;
-    font-weight: 900;
-    letter-spacing: -0.035em;
-    line-height: 1em;
-}
