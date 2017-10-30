@@ -1,8 +1,8 @@
 MARGATSNI
 
-margatsni.xyz
+Margatsni.xyz
 
-A web based tool, Margatnsi is being developed by SolidStateGroup as an Instagram Photo Downloading tool.
+A web based tool, Margatnsi is being developed by SolidStateGroup as an Instagram Photo Downloading service.
 
 Members:
 * Calvin Teng
