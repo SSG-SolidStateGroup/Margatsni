@@ -69,8 +69,8 @@ def get_self_recent_media():
 	dir_path = os.path.dirname(os.path.realpath(__file__))
 	app.logger.debug(dir_path)
 
-	return send_file('D:\This PC (contents)\Desktop\Margatsni\zip_files\helloimcalvin.zip')
-	
+	return send_file(dir_path + '\zip_files' + '\\' + get_file)
+
 def download(photo_urls):
 	username = str(session['instagram_user']['username'])
 	dl_dst = './downloads/' + username
