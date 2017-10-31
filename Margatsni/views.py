@@ -9,7 +9,7 @@ CONFIG = {
 	'client_secret':'67a95b790d714163bf039758690a9b60',
 	'redirect_uri' : 'http://ec2-18-216-153-52.us-east-2.compute.amazonaws.com:80/instagram_callback'
 	#'http://ec2-18-216-153-52.us-east-2.compute.amazonaws.com:80/instagram_callback'
-	#'http://localhost:5000/instagram_callback'
+	#	'redirect_uri' : 'http://localhost:5000/instagram_callback'
 }
 
 api = InstagramAPI(**CONFIG)
@@ -65,12 +65,12 @@ def get_self_recent_media():
 			photos.append(media.get_standard_resolution_url())
 		counter += 1
 
-	get_file = download(photos)
+	get_file = ''.join(('\zip_files\\', download(photos)))
 	dir_path = os.path.dirname(os.path.realpath(__file__))
-	app.logger.debug(dir_path)
-
-	return send_file(dir_path + '\zip_files' + '\\' + get_file)
-
+	dir_path = ''.join((dir_path, '\..'))
+	dir_path = ''.join((dir_path, get_file))
+	return send_file(dir_path)
+	
 def download(photo_urls):
 	username = str(session['instagram_user']['username'])
 	dl_dst = './downloads/' + username
@@ -101,14 +101,13 @@ def download(photo_urls):
 
 					media_file.write(content)
 
-
-	shutil.make_archive(username, 'zip', '/downloads/')
+	shutil.make_archive(username, 'zip', dl_dst)
 
 	try:
-		shutil.move(zip_fname, './zip_files/')
+		shutil.move(zip_fname, './zip_files/' + zip_fname)
 	except shutil.Error:
 		os.remove('./zip_files/' + zip_fname)
-		shutil.move(zip_fname, './zip_files/')
+		shutil.move(zip_fname, './zip_files/' + zip_fname)
 		pass
 
 	return zip_fname
