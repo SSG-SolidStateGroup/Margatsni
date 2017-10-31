@@ -37,8 +37,8 @@ def instagram_callback():
 		access_token, user = api.exchange_code_for_access_token(code)
 		if not access_token:
 			return 'Could not get access token'
-		
-		# Sessions are used to keep this data 
+
+		# Sessions are used to keep this data
 		session['instagram_access_token'] = access_token
 		session['instagram_user'] = user
 
@@ -65,12 +65,13 @@ def get_self_recent_media():
 			photos.append(media.get_standard_resolution_url())
 		counter += 1
 
-	get_file = ''.join(('\zip_files\\', download(photos)))
+	get_file = ''.join(('/zip_files/', download(photos)))
 	dir_path = os.path.dirname(os.path.realpath(__file__))
-	dir_path = ''.join((dir_path, '\..'))
+	dir_path = ''.join((dir_path, '/..'))
 	dir_path = ''.join((dir_path, get_file))
-	return send_file(dir_path)
-	
+	fname = str(session['instagram_user']['username']) + '.zip'
+	return send_file(filename_or_fp=dir_path, as_attachment=True, attachment_filename=fname)
+
 def download(photo_urls):
 	username = str(session['instagram_user']['username'])
 	dl_dst = './downloads/' + username
