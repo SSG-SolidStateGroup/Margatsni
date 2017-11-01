@@ -9,7 +9,7 @@ api = InstagramAPI(access_token=access_token, client_secret=client_secret, clien
 
 #Correct test
 def test_string_equal():
-	assert get_string() == "([User: oalcaraz.09, User: kellynieh], None)"
+	assert get_string() == "([User: the0nlyismail, User: oalcaraz.09, User: kellynieh], None)"
 
 def get_string():
 	people_followed = str(api.user_follows())
