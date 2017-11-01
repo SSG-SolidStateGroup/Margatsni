@@ -8,7 +8,7 @@ CONFIG = {
 	'client_id':'7aaf07aaa882491eb4c73bbdc94fa455',
 	'client_secret':'67a95b790d714163bf039758690a9b60',
 	'redirect_uri' : 'http://ec2-18-216-153-52.us-east-2.compute.amazonaws.com:80/instagram_callback'
-	#'http://ec2-18-216-153-52.us-east-2.compute.amazonaws.com:80/instagram_callback'
+	#	'http://ec2-18-216-153-52.us-east-2.compute.amazonaws.com:80/instagram_callback'
 	#	'redirect_uri' : 'http://localhost:5000/instagram_callback'
 }
 
@@ -102,6 +102,7 @@ def download(photo_urls):
 
 					media_file.write(content)
 
+	#zips downloads and moves them to zip_files directory
 	shutil.make_archive(username, 'zip', dl_dst)
 
 	try:

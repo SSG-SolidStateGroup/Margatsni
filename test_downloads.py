@@ -7,7 +7,6 @@ client_id = "7aaf07aaa882491eb4c73bbdc94fa455"
 
 api = InstagramAPI(access_token=access_token, client_secret=client_secret, client_id=client_id)
 
-
 def get_self_recent_media():
 	next_max = 3
 	api = InstagramAPI(access_token=access_token)
@@ -56,35 +55,36 @@ def download(photo_urls):
 					media_file.write(content)
 	return file_path
 
-'''
-def return_file(photos = []):
-	get_file = ''.join(('/zip_files/', download(photos)))
-	dir_path = os.path.dirname(os.path.realpath(__file__))
-	dir_path = ''.join((dir_path, '/..'))
-	dir_path = ''.join((dir_path, get_file))
-	fname = str(session['instagram_user']['username']) + '.zip'
-	return send_file(filename_or_fp=dir_path, as_attachment=True, attachment_filename=fname)
-
 def zip_files():
+	dl_dst = './downloads/dl_test'
 	# makes .zip file with photos inside inside /zip_files/ directory
-	shutil.make_archive(username, 'zip', dl_dst)
+	shutil.make_archive('dl_test', 'zip', dl_dst)
 
 	try:
-		shutil.move(zip_fname, './zip_files/' + zip_fname)
+		shutil.move('dl_test.zip', './zip_files/dl_test.zip')
 	except shutil.Error:
-		os.remove('./zip_files/' + zip_fname)
-		shutil.move(zip_fname, './zip_files/' + zip_fname)
+		os.remove('./zip_files/' + 'dl_test.zip')
+		shutil.move('dl_test.zip', './zip_files/dl_test.zip')
 		pass
 
-	return zip_fname
-'''
-
 class TestDownload(unittest.TestCase):
+	# test checks to see if download is in downloads folder; deletes folder afterwards
 	def test_downloads(self):
 		photos = get_self_recent_media()
 		path = download(photos)
 		is_file_in_path = os.path.isfile(path)
-		shutil.rmtree("./downloads/dl_test/")
+		shutil.rmtree('./downloads/dl_test/')
+		self.assertTrue(is_file_in_path)
+
+	# test checks to see if file zipped is in zip_files folder; deletes zip file afterwards
+	def test_zip_files(self):
+		photos = get_self_recent_media()
+		download(photos)
+		zip_files()
+		zip_path = os.path.dirname(os.path.realpath(__file__)) + '/zip_files/dl_test.zip'
+		is_file_in_path = os.path.isfile(zip_path)
+		shutil.rmtree('./downloads/dl_test/')
+		os.remove(zip_path)
 		self.assertTrue(is_file_in_path)
 
 if __name__ == '__main__':
