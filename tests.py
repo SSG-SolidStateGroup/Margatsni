@@ -11,10 +11,6 @@ api = InstagramAPI(access_token=access_token, client_secret=client_secret, clien
 def test_string_equal():
 	assert get_string() == "([User: oalcaraz.09, User: kellynieh], None)"
 
-#FAIL ON PURPOSE
-def test_string_equal2():
-	assert get_string() == "([User: oalcaraz.09, User: kellynieh], Noe)"	
-
 def get_string():
 	people_followed = str(api.user_follows())
 	return people_followed
