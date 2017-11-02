@@ -61,10 +61,10 @@ def zip_files():
 	shutil.make_archive('dl_test', 'zip', dl_dst)
 
 	try:
-		shutil.move('dl_test.zip', '../zip_files/dl_test.zip')
+		shutil.move('dl_test.zip', './zip_files/dl_test.zip')
 	except shutil.Error:
 		os.remove('../zip_files/' + 'dl_test.zip')
-		shutil.move('dl_test.zip', '../zip_files/dl_test.zip')
+		shutil.move('dl_test.zip', './zip_files/dl_test.zip')
 		pass
 
 class TestDownload(unittest.TestCase):
