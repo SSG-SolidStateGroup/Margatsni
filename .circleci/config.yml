@@ -54,6 +54,8 @@ jobs:
           name: Deploy to ec2 if tests pass and branch is Master
           command: aws ec2 sync jekyll/_site/docs ec2://circle-production-static-site/docs/ --delete
 
+workflows:
+  version: 2
   build-deploy:
     jobs:
       - build-job
