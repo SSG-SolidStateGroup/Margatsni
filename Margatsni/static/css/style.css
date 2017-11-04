@@ -1,0 +1,80 @@
+a {
+    color: inherit;
+}
+
+body {
+    width: 100wh;
+    height: 90vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+/* CSS for classes */
+
+.title {
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 80px;
+    font-family: 'Sofia', cursive;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.button {
+    display:block;
+    width:20%; 
+    margin: 10px auto;
+    font-family:"Sofia", cursive;
+    font-size:30px;
+    outline:none;
+    color: white;
+    border:none;
+    text-align:center;
+    cursor:pointer;
+    background-color:black;
+    border-radius: 30px;
+}
+
+/* CSS for divs */
