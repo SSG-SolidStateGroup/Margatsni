@@ -7,8 +7,9 @@ import os, requests, shutil
 CONFIG = {
 	'client_id':'7aaf07aaa882491eb4c73bbdc94fa455',
 	'client_secret':'67a95b790d714163bf039758690a9b60',
-	'redirect_uri' : 'http://ec2-18-216-153-52.us-east-2.compute.amazonaws.com:80/instagram_callback'
+	'redirect_uri' : 'http://margatsni.xyz:80/instagram_callback'
 	#	'http://ec2-18-216-153-52.us-east-2.compute.amazonaws.com:80/instagram_callback'
+	#	'http://margatsni.xyz:80/instagram_callback'
 	#	'redirect_uri' : 'http://localhost:5000/instagram_callback'
 }
 
@@ -17,10 +18,7 @@ api = InstagramAPI(**CONFIG)
 # main page
 @app.route('/')
 def index():
-	if 'instagram_access_token' in session and 'instagram_user' in session:
-		return render_template('index.html')
-	else:
-		return redirect('/connect')
+	return render_template('index.html')
 
 # Redirect users to Instagram for login to retrieve code for access_token
 @app.route('/connect')
