@@ -61,7 +61,7 @@ body {
 .title {
     color: white;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-    font-size: 80px;
+    font-size: 60px;
     font-family: 'Sofia', cursive;
     text-align: center;
     padding-top: 50px;
@@ -70,7 +70,7 @@ body {
 
 .button {
     display:block;
-    width:20%; 
+    width:300px; 
     margin: 10px auto;
     font-family:"Sofia", cursive;
     font-size:30px;
