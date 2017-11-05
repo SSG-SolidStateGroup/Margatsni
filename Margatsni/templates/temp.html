@@ -6,12 +6,12 @@
     <title>Margatsni - Instagram Photo Downloader</title>
     <meta name="description" content="Margatsni - Instagram Photo Downloader">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/style.css">
     <link href="https://fonts.googleapis.com/css?family=Kranky|Sofia" rel="stylesheet">
 </head>
 
 <body>
-    <h1 class="title"><a href="{{url_for('/')}}"> Margatsni </a></h1>
+    <h1 class="title"><a href="{{url_for('index')}}"> Margatsni </a></h1>
     <a class="button" href="{{url_for('connect')}}">Login</a>
     <form class="container" action="/get-user-media" method="post">
         <button class="button">Get Your Photos</button>
