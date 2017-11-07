@@ -2,8 +2,9 @@ from Margatsni import app
 from instagram.client import InstagramAPI
 
 from flask import Flask, request, render_template, session, redirect, send_file
-import os, requests, shutil
+import os, requests, shutil, json
 
+LOGIN_URL = "https://www.instagram.com/accounts/login/ajax/"
 # main page
 @app.route('/')
 def index():
@@ -15,8 +16,20 @@ def login():
 	if request.method == 'POST':
 		session['login_user'] = request.form['username']
 		session['login_pass'] = request.form['password']
-		app.logger.debug(session['login_user'] + " " + session['login_pass'])
-		return render_template('index.html')
+		s = requests.Session()
+
+		s.headers.update({'Referer': "https://www.instagram.com"})
+		req = s.get("https://www.instagram.com")
+		s.headers.update({'X-CSRFToken': req.cookies['csrftoken']})
+
+		login_data = {'username': session['login_user'], 'password': session['login_pass']}
+		login = s.post(LOGIN_URL, data=login_data, allow_redirects=True)
+		s.headers.update({'X-CSRFToken': login.cookies['csrftoken']})
+		login_text = json.loads(login.text)
+		if login_text.get('authenticated') and login.status_code == 200:
+			return render_template('index2.html')
+		else:
+			return render_template('index.html')
 	return render_template('login.html')
 
 @app.route('/get-user-media', methods=['GET', 'POST'])
