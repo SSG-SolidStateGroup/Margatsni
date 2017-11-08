@@ -8,7 +8,7 @@ import os, datetime
 
 # Create the directory to search for files
 # The syntax is folder = '/Path/to/yourDir/'
-files = 'C:/Users/B.Cherry/Desktop'
+files = 'D:/Git/Repositories/Margatsni'
 
 # Create an array of those files based on the directory
 fileList = os.listdir(files)
