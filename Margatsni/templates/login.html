@@ -1,17 +1,21 @@
 <html>
   <head>
-    <title>Flask Intro - login page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta charset="utf-8">
+    <title>Margatsni - Instagram Photo Downloader</title>
+    <meta name="description" content="Margatsni - Instagram Photo Downloader">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Kranky|Sofia" rel="stylesheet">
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <div class="container">
-      <h1>Please login</h1>
+      <h1 class="title"> Enter Username and Password </h1>
       <br>
       <form action="" method="post">
-        <input type="text" placeholder="Username" name="username" value="">
-         <input type="password" placeholder="Password" name="password" value="">
-        <input class="btn btn-default" type="submit" value="Login">
+        <input class="button" type="text" placeholder="Username" name="username" value="">
+         <input class="button" type="password" placeholder="Password" name="password" value="">
+        <input class="button" type="submit" value="Login">
       </form>
       {% if error %}
         <p class="error"><strong>Error:</strong> {{ error }}
