@@ -2,7 +2,7 @@ from Margatsni import app
 from instagram.client import InstagramAPI
 from instagram_scraper import InstagramScraper
 from flask import Flask, request, render_template, session, redirect, flash, send_file
-import os, requests, shutil, json, concurrent.futures
+import os, requests, shutil, json, concurrent.futures, tqdm
 
 LOGIN_URL = "https://www.instagram.com/accounts/login/ajax/"
 max_items = 20
@@ -46,26 +46,52 @@ def validateUser():
 
 @app.route('/get-target-media', methods=['GET', 'POST'])
 def get_target_media():
-	executor=concurrent.futures.ThreadPoolExecutor(max_workers=10)
+	executor=concurrent.futures.ThreadPoolExecutor(max_workers=20)
 
-	username = request.form['target']
-	zip_fname = username + '.zip'
-	api.posts = []
-	api.last_scraped_filetime = 0
-	future_to_item = {}
+	target = request.form['target']
+	api.usernames = [target]
+	app.logger.debug(api.usernames)
+	zip_fname = target + '.zip'
+	
+	if api.login_user and api.login_pass:
+			api.login()
+			if not api.logged_in and api.login_only:
+				api.logger.warning('Fallback anonymous scraping disabled')
+				return
 
-	dst = './downloads/' + username
-	try:
-		os.makedirs(dst)
-	except FileExistsError:
-		shutil.rmtree(dst)
-		os.makedirs(dst)
-		pass
+	for username in api.usernames:
+		api.posts = []
+		api.last_scraped_filemtime = 0
+		future_to_item = {}
 
-	user_details = api.get_user_details(username)
+		dst = './downloads/' + username
+		try:
+			os.makedirs(dst)
+		except FileExistsError:
+			shutil.rmtree(dst)
+			os.makedirs(dst)
+			pass
 
-	# Crawls the media and sends it to the executor.
-	api.get_media(dst, executor, future_to_item, user_details)
+		# Get the user metadata.
+		user = api.fetch_user(username)
+
+		# Crawls the media and sends it to the executor.
+		user_details = api.get_user_details(username)
+		api.get_media(dst, executor, future_to_item, user_details)
+
+		# Displays the progress bar of completed downloads. Might not even pop up if all media is downloaded while
+		# the above loop finishes.
+		if future_to_item:
+			for future in tqdm.tqdm(concurrent.futures.as_completed(future_to_item), total=len(future_to_item), desc='Downloading', disable=api.quiet):
+				item = future_to_item[future]
+
+				if future.exception() is not None:
+					api.logger.warning('Media at {0} generated an exception: {1}'.format(item['urls'], future.exception()))
+
+		if (api.media_metadata or api.comments or api.include_location) and api.posts:
+			api.save_json(api.posts, '{0}/{1}.json'.format(dst, username))
+
+	api.logout()
 
 	shutil.make_archive(username, 'zip', dst)
 
@@ -76,45 +102,3 @@ def get_target_media():
 		shutil.move(zip_fname, './zip_files/' + zip_fname)
 		pass
 	return send_file(filename_or_fp='../zip_files/'+zip_fname, as_attachment=True, attachment_filename=zip_fname)
-
-def download(photo_urls):
-	username = str(session['instagram_user']['username'])
-	dl_dst = './downloads/' + username
-	zip_fname = username + '.zip'
-
-	# if directory exists, it overwrites the old directory
-	try:
-		os.makedirs(dl_dst)
-	except FileExistsError:
-		shutil.rmtree(dl_dst)
-		os.makedirs(dl_dst)
-		pass
-
-	#saves all photos in directory made above ^^^
-	for url in photo_urls:
-		base_name = url.split('/')[-1].split('?')[0]
-		file_path = os.path.join(dl_dst, base_name)
-
-		r = requests.get(url)
-
-		if not os.path.isfile(file_path):
-			with open(file_path, 'wb') as media_file:
-					try:
-						content = r.content
-					except requests.exceptions.ConnectionError:
-						time.sleep(5)
-						content = r.content
-
-					media_file.write(content)
-
-	#zips downloads and moves them to zip_files directory
-	shutil.make_archive(username, 'zip', dl_dst)
-
-	try:
-		shutil.move(zip_fname, './zip_files/' + zip_fname)
-	except shutil.Error:
-		os.remove('./zip_files/' + zip_fname)
-		shutil.move(zip_fname, './zip_files/' + zip_fname)
-		pass
-
-	return zip_fname
