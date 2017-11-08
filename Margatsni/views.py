@@ -48,7 +48,7 @@ def validateUser():
 def get_target_media():
 	executor=concurrent.futures.ThreadPoolExecutor(max_workers=10)
 
-	username = api.username = 'kellynieh'
+	username = request.form['target']
 	zip_fname = username + '.zip'
 	api.posts = []
 	api.last_scraped_filetime = 0

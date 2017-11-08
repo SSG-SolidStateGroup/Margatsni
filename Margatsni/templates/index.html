@@ -19,6 +19,7 @@
         <p> Hello {{session['login_user']}}!</p>
     {% endif %}
     <form class="container" action="/get-target-media" method="post">
+        <input type="text" placeholder="Instagram Profile" name="target">
         <button class="button">Get Your Photos</button>
     </form>
 </body>
