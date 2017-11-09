@@ -59,7 +59,7 @@ p {
 }
 
 input[type=text] {
-    width: 70%;
+    width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -95,8 +95,8 @@ input[type=username], input[type=password] {
     display: block;
     width: 300px;
     margin: 10px auto;
-    font-family: "Sofia", cursive;
-    font-size: 30px;
+    font-family: "Domine", cursive;
+    font-size: 25px;
     outline: none;
     color: white;
     border: none;
@@ -113,7 +113,7 @@ input[type=username], input[type=password] {
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -100px;
+    margin-top: -250px;
     margin-left: -200px;
 }
 
