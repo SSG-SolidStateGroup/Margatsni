@@ -54,6 +54,32 @@ body {
     }
 }
 
+p {
+    text-align:center;
+}
+
+input[type=text] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type=username], input[type=password] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 /* CSS for classes */
 
 .title {
@@ -80,4 +106,23 @@ body {
     border-radius: 30px;
 }
 
+.login {
+    height: 200px;
+    width: 400px;
+    background: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+.container {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.flashes {
+    text-align: center;
+}
 /* CSS for divs */

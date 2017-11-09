@@ -12,16 +12,25 @@
 </head>
 
 <body>
+    {% with messages = get_flashed_messages() %} 
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+    </ul>
+    {% endif %} {% endwith %} {% block body %}{% endblock %}
+    
     <h1 class="title"><a href="{{url_for('index')}}"> Margatsni </a></h1>
-    {% if not session['logged_in'] %}
-        <a class="button" href="{{url_for('login')}}">Login</a>
-    {% else %}
-        <p> Hello {{session['login_user']}}!</p>
-    {% endif %}
     <form class="container" action="/get-target-media" method="post">
-        <input type="text" placeholder="Instagram Profile" name="target">
-        <button class="button">Get Your Photos</button>
+        <input type="text" placeholder="Instagram User (must login to download private user's photos)" name="target">
+        <button class="button">Get Photos</button>
     </form>
+    {% if not session['logged_in'] %}
+    <a class="button" href="{{url_for('login')}}">Login</a> 
+    {% else %}
+    <p> Hello {{session['login_user']}}!</p>
+    {% endif %}
 </body>
 
 </html>

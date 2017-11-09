@@ -1,5 +1,4 @@
 from Margatsni import app
-from instagram.client import InstagramAPI
 from instagram_scraper import InstagramScraper
 from flask import Flask, request, render_template, session, redirect, flash, send_file
 import os, requests, shutil, json, concurrent.futures, tqdm
@@ -46,59 +45,65 @@ def validateUser():
 
 @app.route('/get-target-media', methods=['GET', 'POST'])
 def get_target_media():
-	executor=concurrent.futures.ThreadPoolExecutor(max_workers=20)
-
-	target = request.form['target']
-	api.usernames = [target]
-	app.logger.debug(api.usernames)
-	zip_fname = target + '.zip'
-	
-	if api.login_user and api.login_pass:
-			api.login()
-			if not api.logged_in and api.login_only:
-				api.logger.warning('Fallback anonymous scraping disabled')
-				return
-
-	for username in api.usernames:
-		api.posts = []
-		api.last_scraped_filemtime = 0
-		future_to_item = {}
-
-		dst = './downloads/' + username
-		try:
-			os.makedirs(dst)
-		except FileExistsError:
-			shutil.rmtree(dst)
-			os.makedirs(dst)
-			pass
-
-		# Get the user metadata.
-		user = api.fetch_user(username)
-
-		# Crawls the media and sends it to the executor.
-		user_details = api.get_user_details(username)
-		api.get_media(dst, executor, future_to_item, user_details)
-
-		# Displays the progress bar of completed downloads. Might not even pop up if all media is downloaded while
-		# the above loop finishes.
-		if future_to_item:
-			for future in tqdm.tqdm(concurrent.futures.as_completed(future_to_item), total=len(future_to_item), desc='Downloading', disable=api.quiet):
-				item = future_to_item[future]
-
-				if future.exception() is not None:
-					api.logger.warning('Media at {0} generated an exception: {1}'.format(item['urls'], future.exception()))
-
-		if (api.media_metadata or api.comments or api.include_location) and api.posts:
-			api.save_json(api.posts, '{0}/{1}.json'.format(dst, username))
-
-	api.logout()
-
-	shutil.make_archive(username, 'zip', dst)
-
 	try:
-		shutil.move(zip_fname, './zip_files/' + zip_fname)
-	except shutil.Error:
-		os.remove('./zip_files/' + zip_fname)
-		shutil.move(zip_fname, './zip_files/' + zip_fname)
+		executor=concurrent.futures.ThreadPoolExecutor(max_workers=20)
+	
+		target = request.form['target']
+		api.usernames = [target]
+		app.logger.debug(api.usernames)
+		zip_fname = target + '.zip'
+		
+		if api.login_user and api.login_pass:
+				api.login()
+				if not api.logged_in and api.login_only:
+					api.logger.warning('Fallback anonymous scraping disabled')
+					return
+	
+		for username in api.usernames:
+			api.posts = []
+			api.last_scraped_filemtime = 0
+			future_to_item = {}
+	
+			dst = './downloads/' + username
+			try:
+				os.makedirs(dst)
+			except FileExistsError:
+				shutil.rmtree(dst)
+				os.makedirs(dst)
+				pass
+	
+			# Get the user metadata.
+			user = api.fetch_user(username)
+	
+			# Crawls the media and sends it to the executor.
+			user_details = api.get_user_details(username)
+			api.get_media(dst, executor, future_to_item, user_details)
+	
+			# Displays the progress bar of completed downloads. Might not even pop up if all media is downloaded while
+			# the above loop finishes.
+			if future_to_item:
+				for future in tqdm.tqdm(concurrent.futures.as_completed(future_to_item), total=len(future_to_item), desc='Downloading', disable=api.quiet):
+					item = future_to_item[future]
+	
+					if future.exception() is not None:
+						api.logger.warning('Media at {0} generated an exception: {1}'.format(item['urls'], future.exception()))
+	
+			if (api.media_metadata or api.comments or api.include_location) and api.posts:
+				api.save_json(api.posts, '{0}/{1}.json'.format(dst, username))
+	
+		api.logout()
+	
+		#zips file and moves it to zip_files directory, replacing old one if it already exists
+		shutil.make_archive(username, 'zip', dst)
+	
+		try:
+			shutil.move(zip_fname, './zip_files/' + zip_fname)
+		except shutil.Error:
+			os.remove('./zip_files/' + zip_fname)
+			shutil.move(zip_fname, './zip_files/' + zip_fname)
+			pass
+		return send_file(filename_or_fp='../zip_files/'+zip_fname, as_attachment=True, attachment_filename=zip_fname)
+	except ValueError:
+		flash('Not a valid instagram user.')
 		pass
-	return send_file(filename_or_fp='../zip_files/'+zip_fname, as_attachment=True, attachment_filename=zip_fname)
+		return redirect('/')
