@@ -1,5 +1,5 @@
-mport os
-from datetime import datetime
+import os, datetime
+
 
 ## This script is designed to (a) provide an example of how to
 ## get the creation date (or last modified date) of a file
@@ -8,23 +8,25 @@ from datetime import datetime
 
 # Create the directory to search for files
 # The syntax is folder = '/Path/to/yourDir/'
-files = 'C:/Users/B.Cherry/Desktop'
+files = 'D:/Git/Repositories/Margatsni'
 
-# Create a list of those files based on the directory
+# Create an array of those files based on the directory
 fileList = os.listdir(files)
 
 # Print an array of those file names and folder names alphabetically a -> z
 print(fileList)
 
-# For each of the files/folders in the fileList, print the creation date,
-# or the most recent modified date
+# For each of the files/folders in the fileList, print the file name,
+# and the last modified date
 for plsWork in fileList:
     #print(os.stat(fileList).st_ctime)
-    #print(os.stat('C:/Users.B.Cherry/Desktop/' + plsWork).st_ctime)
     try:
-        modifiedTime = os.path.getmtime(plsWork) #.strftime('%Y-%m-%d %H:%M:%S')
-        print(modifiedTime)
+        modifiedTime = datetime.datetime.fromtimestamp(float(os.path.getmtime(plsWork))).strftime("%B %d, %Y")
+        print(plsWork + " was last modified on " + modifiedTime)
     except OSError:
         mtime = 0
         print("File wasn't found!")
+
+# Store the last modified dates of each file in an array, to
+# determine which one is oldest
     
