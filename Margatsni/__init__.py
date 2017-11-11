@@ -20,14 +20,12 @@ def wipe_dl_and_zip():
 	dl_path = file_path + '/../downloads'
 	zip_path = file_path + '/../zip_files'
 	try:
-		os.remove(dl_path)
-		os.remove(zip_path)
-		#os.mkdir(dl_path)
-		#os.mkdir(zip_path)
+		shutil.rmtree(dl_path)
+		shutil.rmtree(zip_path)
+		os.mkdir(dl_path)
+		os.mkdir(zip_path)
 	except Exception as e:
 		print(e)
-
-	print("cleared folders")
 
 app = Flask(__name__)
 app.config.from_object(Config())
