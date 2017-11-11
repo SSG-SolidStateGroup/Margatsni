@@ -5,18 +5,19 @@ from bs4 import BeautifulSoup
 import os, requests, shutil, json, concurrent.futures, tqdm, re
 
 LOGIN_URL = "https://www.instagram.com/accounts/login/ajax/"
+logged_in = False
 api = InstagramScraper( media_types=['image','carousel','video'],
 						maximum=100 )
 
 # main page
 @app.route('/')
 def index():
+
 	return render_template('index.html')
 
 # log-in page, will detect invalid logins
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-	failed_login = False
 	session['logged_in'] = False
 	if request.method == 'POST':
 		session['login_user'] = request.form['username']
@@ -27,6 +28,8 @@ def login():
 			api.login_user = session['login_user']
 			api.login_pass = session['login_pass']
 			api.login()
+			global logged_in
+			logged_in = True
 			session['logged_in'] = True
 			return redirect('/')
 		else:
@@ -35,6 +38,8 @@ def login():
 
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
+	global logged_in
+	logged_in = False
 	session['logged_in'] = False
 	api.logout()
 	return redirect('/')
@@ -54,25 +59,41 @@ def validateUser():
 @app.route('/get-media', methods=['GET', 'POST'])
 def get_media():
 	try:
+		global logged_in
 		target = request.form['target']
 		pieces = target.split('/')
+
 		if 'p' in pieces:
-			file_path, base_name = get_single_photo(target)
-			return send_file( filename_or_fp = '../' + file_path,
-							  as_attachment=True,
-			 				  attachment_filename=base_name )
+			json_text = create_json_text(img_url)
+			is_private = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']['is_private']
+
+			if is_private and not logged_in:
+				flash('User is private. You will need to log in to retrieve media.')
+				return redirect('/')
+			else:
+				file_path, base_name = get_single_photo(target)
+				return send_file( filename_or_fp = '../' + file_path,
+								  as_attachment=True,
+				 				  attachment_filename=base_name )
 	
 		else:
-			zip_fname = get_target_batch(target)
-			return send_file( filename_or_fp = '../zip_files/' + zip_fname,
-							  as_attachment=True,
-							  attachment_filename=zip_fname)
+			if '.com' not in target:
+				json_text = create_json_text('https://www.instagram.com/' + target + '/')
+			else:
+				json_text = create_json_text(target)
+	
+			is_private = json_text['entry_data']['ProfilePage'][0]['user']['is_private']
+
+			if is_private and not logged_in:
+				flash('User is private. You will need to log in to retrieve media.')
+				return redirect('/')
+			else:
+				zip_fname = get_target_batch(target)
+				return send_file( filename_or_fp = '../zip_files/' + zip_fname,
+								  as_attachment=True,
+								  attachment_filename=zip_fname)
 	except ValueError:
 		flash('Not a valid instagram user.')
-		pass
-		return redirect('/')
-	except TypeError:
-		flash('Enter a valid user or instagram link.')
 		pass
 		return redirect('/')
 
@@ -88,7 +109,6 @@ def get_target_batch(target):
 			break
 	api.usernames = [target]
 	zip_fname = target + '.zip'
-	api.login()
 
 	for username in api.usernames:
 		api.posts = []
@@ -121,12 +141,7 @@ def get_target_batch(target):
 	return zip_fname
 
 def get_single_photo(img_url):
-	#scrapes html to find link within json portion containing image
-	r = api.session.get(img_url)
-	soup = BeautifulSoup(r.text)
-	script = soup.find('script', type=["text/javascript"], string=re.compile("window._sharedData"))
-	temp = re.search(r'^\s*window._sharedData\s*=\s*({.*?})\s*;\s*$', script.string, flags=re.DOTALL | re.MULTILINE).group(1)
-	json_text = json.loads(temp)
+	json_text = create_json_text(img_url)
 	url = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['display_url']
 
 	username = str(session['login_user']) + '_session'
@@ -149,13 +164,22 @@ def get_single_photo(img_url):
 
 	return file_path, base_name
 
+#formats script portion of html to create json text
+def create_json_text(url):
+	r = api.session.get(url)
+	soup = BeautifulSoup(r.text)
+	script = soup.find('script', type=["text/javascript"], string=re.compile("window._sharedData"))
+	temp = re.search(r'^\s*window._sharedData\s*=\s*({.*?})\s*;\s*$', script.string, flags=re.DOTALL | re.MULTILINE).group(1)
+	json_text = json.loads(temp)
+	return json_text
+
 #creates a directory at 'dst' and replaces old one if already existing
 def create_dir(dst):
 	try:
-		os.makedirs(dst)
+		os.mkdir(dst)
 	except FileExistsError:
 		shutil.rmtree(dst)
-		os.makedirs(dst)
+		os.mkdir(dst)
 		pass
 
 #creates a zip file at dst and replaces old one if already existing

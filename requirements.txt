@@ -3,3 +3,4 @@ instagram-scraper==1.5.6
 requests==2.18.4
 tqdm==4.19.4
 beautifulsoup4==4.6.0
+Flask-APScheduler==1.7.1

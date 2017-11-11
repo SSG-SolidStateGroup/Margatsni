@@ -7,5 +7,5 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
-    install_requires=['flask', 'requests', 'instagram-scraper', 'tqdm', 'beautifulsoup4']
+    install_requires=['flask', 'requests', 'instagram-scraper', 'tqdm', 'beautifulsoup4', 'Flask-APScheduler']
 	)
