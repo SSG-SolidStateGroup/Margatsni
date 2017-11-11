@@ -1,11 +1,12 @@
 from Margatsni import app
 from instagram_scraper import InstagramScraper
 from flask import Flask, request, render_template, session, redirect, flash, send_file
-import os, requests, shutil, json, concurrent.futures, tqdm
+from bs4 import BeautifulSoup
+import os, requests, shutil, json, concurrent.futures, tqdm, re
 
 LOGIN_URL = "https://www.instagram.com/accounts/login/ajax/"
-max_items = 20
-api = InstagramScraper(login_user=None, login_pass=None, media_types=['image','carousel'], maximum=max_items)
+api = InstagramScraper( media_types=['image','carousel','video'],
+						maximum=100 )
 
 # main page
 @app.route('/')
@@ -32,7 +33,12 @@ def login():
 			flash('Unsuccessful login.')
 	return render_template('login.html')
 
-# validates if user and pass is a valid instagram account
+@app.route('/logout', methods=['GET', 'POST'])
+def logout():
+	session['logged_in'] = False
+	api.logout()
+	return redirect('/')
+
 def validateUser():
 	s = requests.Session()
 	s.headers.update({'Referer': "https://www.instagram.com"})
@@ -43,67 +49,121 @@ def validateUser():
 	s.headers.update({'X-CSRFToken': login.cookies['csrftoken']})
 	return json.loads(login.text), login
 
-@app.route('/get-target-media', methods=['GET', 'POST'])
-def get_target_media():
+# takes input from user as instagram user name, profile url, or user's photo url
+# and retrieves image(s)/video(s) from given input
+@app.route('/get-media', methods=['GET', 'POST'])
+def get_media():
 	try:
-		executor=concurrent.futures.ThreadPoolExecutor(max_workers=20)
-	
 		target = request.form['target']
-		api.usernames = [target]
-		app.logger.debug(api.usernames)
-		zip_fname = target + '.zip'
-		
-		if api.login_user and api.login_pass:
-				api.login()
-				if not api.logged_in and api.login_only:
-					api.logger.warning('Fallback anonymous scraping disabled')
-					return
+		pieces = target.split('/')
+		if 'p' in pieces:
+			file_path, base_name = get_single_photo(target)
+			return send_file( filename_or_fp = '../' + file_path,
+							  as_attachment=True,
+			 				  attachment_filename=base_name )
 	
-		for username in api.usernames:
-			api.posts = []
-			api.last_scraped_filemtime = 0
-			future_to_item = {}
-	
-			dst = './downloads/' + username
-			try:
-				os.makedirs(dst)
-			except FileExistsError:
-				shutil.rmtree(dst)
-				os.makedirs(dst)
-				pass
-	
-			# Get the user metadata.
-			user = api.fetch_user(username)
-	
-			# Crawls the media and sends it to the executor.
-			user_details = api.get_user_details(username)
-			api.get_media(dst, executor, future_to_item, user_details)
-	
-			# Displays the progress bar of completed downloads. Might not even pop up if all media is downloaded while
-			# the above loop finishes.
-			if future_to_item:
-				for future in tqdm.tqdm(concurrent.futures.as_completed(future_to_item), total=len(future_to_item), desc='Downloading', disable=api.quiet):
-					item = future_to_item[future]
-	
-					if future.exception() is not None:
-						api.logger.warning('Media at {0} generated an exception: {1}'.format(item['urls'], future.exception()))
-	
-			if (api.media_metadata or api.comments or api.include_location) and api.posts:
-				api.save_json(api.posts, '{0}/{1}.json'.format(dst, username))
-	
-		api.logout()
-	
-		#zips file and moves it to zip_files directory, replacing old one if it already exists
-		shutil.make_archive(username, 'zip', dst)
-	
-		try:
-			shutil.move(zip_fname, './zip_files/' + zip_fname)
-		except shutil.Error:
-			os.remove('./zip_files/' + zip_fname)
-			shutil.move(zip_fname, './zip_files/' + zip_fname)
-			pass
-		return send_file(filename_or_fp='../zip_files/'+zip_fname, as_attachment=True, attachment_filename=zip_fname)
+		else:
+			zip_fname = get_target_batch(target)
+			return send_file( filename_or_fp = '../zip_files/' + zip_fname,
+							  as_attachment=True,
+							  attachment_filename=zip_fname)
 	except ValueError:
 		flash('Not a valid instagram user.')
 		pass
 		return redirect('/')
+	except TypeError:
+		flash('Enter a valid user or instagram link.')
+		pass
+		return redirect('/')
+
+# retrieves batch file of all of target's media
+def get_target_batch(target):
+	executor=concurrent.futures.ThreadPoolExecutor(max_workers=20)
+	
+	blacklist = ['https:', '', 'www.instagram.com']
+	pieces = target.split('/')
+	for p in pieces:
+		if p not in blacklist:
+			target = p
+			break
+	api.usernames = [target]
+	zip_fname = target + '.zip'
+	api.login()
+
+	for username in api.usernames:
+		api.posts = []
+		api.last_scraped_filemtime = 0
+		future_to_item = {}
+
+		dst = './downloads/' + username
+		create_dir(dst)
+
+		# Get the user metadata.
+		user = api.fetch_user(username)
+
+		# Crawls the media and sends it to the executor.
+		user_details = api.get_user_details(username)
+		api.get_media(dst, executor, future_to_item, user_details)
+
+		# Displays the progress bar of completed downloads. Might not even pop up if all media is downloaded while
+		# the above loop finishes.
+		if future_to_item:
+			for future in tqdm.tqdm(concurrent.futures.as_completed(future_to_item), total=len(future_to_item), desc='Downloading', disable=api.quiet):
+				item = future_to_item[future]
+
+				if future.exception() is not None:
+					api.logger.warning('Media at {0} generated an exception: {1}'.format(item['urls'], future.exception()))
+
+		if (api.media_metadata or api.comments or api.include_location) and api.posts:
+			api.save_json(api.posts, '{0}/{1}.json'.format(dst, username))
+	
+	create_zip(username, zip_fname, dst)
+	return zip_fname
+
+def get_single_photo(img_url):
+	#scrapes html to find link within json portion containing image
+	r = api.session.get(img_url)
+	soup = BeautifulSoup(r.text)
+	script = soup.find('script', type=["text/javascript"], string=re.compile("window._sharedData"))
+	temp = re.search(r'^\s*window._sharedData\s*=\s*({.*?})\s*;\s*$', script.string, flags=re.DOTALL | re.MULTILINE).group(1)
+	json_text = json.loads(temp)
+	url = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['display_url']
+
+	username = str(session['login_user']) + '_session'
+	dst = './downloads/' + username
+
+	create_dir(dst)
+
+	#saves all photos in directory made above
+	base_name = url.split('/')[-1].split('?')[0]
+	file_path = os.path.join(dst, base_name)
+	r = requests.get(url)
+	if not os.path.isfile(file_path):
+		with open(file_path, 'wb') as media_file:
+				try:
+					content = r.content
+				except requests.exceptions.ConnectionError:
+					time.sleep(5)
+					content = r.content
+				media_file.write(content)
+
+	return file_path, base_name
+
+#creates a directory at 'dst' and replaces old one if already existing
+def create_dir(dst):
+	try:
+		os.makedirs(dst)
+	except FileExistsError:
+		shutil.rmtree(dst)
+		os.makedirs(dst)
+		pass
+
+#creates a zip file at dst and replaces old one if already existing
+def create_zip(username, zip_fname, dst):
+	shutil.make_archive(username, 'zip', dst)
+	try:
+		shutil.move(zip_fname, './zip_files/' + zip_fname)
+	except shutil.Error:
+		os.remove('./zip_files/' + zip_fname)
+		shutil.move(zip_fname, './zip_files/' + zip_fname)
+		pass

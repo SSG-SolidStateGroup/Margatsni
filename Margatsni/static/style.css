@@ -6,56 +6,49 @@
         display: block;
     }
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 body {
-    width: 100wh;
-    height: 90vh;
     color: #fff;
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 400% 400%;
-    -webkit-animation: Gradient 20s ease infinite;
-    -moz-animation: Gradient 20s ease infinite;
-    animation: Gradient 20s ease infinite;
+
+
+background: linear-gradient(270deg, #13547a, #868f96, #596164, #1e3c72, #2a5298);
+background-size: 1000% 1000%;
+
+-webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+-o-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+
 }
-@-webkit-keyframes Gradient {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-@-moz-keyframes Gradient {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-@keyframes Gradient {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 p {
-    text-align:center;
+    text-align: center;
 }
 
 input[type=text] {
@@ -69,7 +62,8 @@ input[type=text] {
     text-align: center;
 }
 
-input[type=username], input[type=password] {
+input[type=username],
+input[type=password] {
     width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -79,6 +73,9 @@ input[type=username], input[type=password] {
     box-sizing: border-box;
     text-align: center;
 }
+
+
+
 
 /* CSS for classes */
 
@@ -91,6 +88,7 @@ input[type=username], input[type=password] {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
 .button {
     display: block;
     width: 300px;
@@ -110,11 +108,16 @@ input[type=username], input[type=password] {
     height: 200px;
     width: 400px;
     background: relative;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -200px;
+    display: block;
+    width: 35%;
+    margin: 10px auto;
+    font-family: "Domine", cursive;
+    font-size: 25px;
+    outline: none;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 30px;
 }
 
 .container {
@@ -122,7 +125,16 @@ input[type=username], input[type=password] {
     text-align: center;
 }
 
-.flashes {
-    text-align: center;
+.hellomsg {
+    text-align: inherit;
+    font-size: 20px;
 }
+
+.flashes {
+    text-align: inherit;
+}
+
+
+
+
 /* CSS for divs */

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <h1 class="title"><a href="{{url_for('index')}}"> Margatsni </a></h1>
     <!--- Prints error message to screen when login is unsuccessful -->
     {% with messages = get_flashed_messages() %} {% if messages %}
     <ul class=flashes>
@@ -19,12 +20,9 @@
         {% endfor %}
     </ul>
     {% endif %} {% endwith %} {% block body %}{% endblock %}
-    
     <div class="container">
-        <h1 class="title"><a href="{{url_for('index')}}"> Margatsni </a></h1>
         <form class="login" method="post">
             <input type="username" placeholder="Instagram Username" name="username" value="">
-            <br>
             <input type="password" placeholder="Instagram Password" name="password" value="">
             <input class="button" type="submit" value="Login">
         </form>
