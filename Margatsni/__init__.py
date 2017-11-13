@@ -9,7 +9,7 @@ class Config(object):
 			'func': 'Margatsni:wipe_dl_and_zip',
 			'args': (),
 			'trigger': 'interval',
-			'minutes': 1
+			'minutes': 30
 		}
 	]
 

@@ -92,7 +92,7 @@ def get_media():
 				return send_file( filename_or_fp = '../zip_files/' + zip_fname,
 								  as_attachment=True,
 								  attachment_filename=zip_fname)
-	except ValueError:
+	except (ValueError, KeyError) as e:
 		flash('Not a valid instagram user.')
 		pass
 		return redirect('/')

@@ -1,2 +1,221 @@
 INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
 INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:37:38.564152-08:00 (in 59.997482 seconds)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:37:38.874076-08:00 (in 59.997382 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 337-538-313
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:36:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:36:47] "GET /static/style.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET // HTTP/1.1" 404 20029
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:36:50] "POST /get-media HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:36:50] "GET /get-media?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:36:50] "GET /get-media?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:36:50] "GET /get-media?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:36:50] "GET /get-media?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:36:50] "GET /get-media?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/calvin/Desktop/Margatsni/Margatsni/views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:39:19.468888-08:00 (in 59.997462 seconds)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:39:19.778538-08:00 (in 59.997380 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 337-538-313
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:38:23] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET // HTTP/1.1" 404 20008
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:38:25] "POST /get-media HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:38:25] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /a/ HTTP/1.1" 404 20008
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:38:34] "POST /get-media HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:38:34] "GET / HTTP/1.1" 200 -
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:39:19 PST)" (scheduled at 2017-11-13 13:39:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:40:19.468888-08:00 (in 59.998939 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:40:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:39:19 PST)" (scheduled at 2017-11-13 13:39:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:40:19.778538-08:00 (in 59.999383 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:40:19 PST)" executed successfully
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /asdf/ HTTP/1.1" 404 20008
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:40:02] "POST /get-media HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:40:02] "GET / HTTP/1.1" 200 -
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:40:19 PST)" (scheduled at 2017-11-13 13:40:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:41:19.468888-08:00 (in 59.997161 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:41:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:40:19 PST)" (scheduled at 2017-11-13 13:40:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:41:19.778538-08:00 (in 59.997588 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:41:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:41:19 PST)" (scheduled at 2017-11-13 13:41:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:42:19.468888-08:00 (in 59.998159 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:42:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:41:19 PST)" (scheduled at 2017-11-13 13:41:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:42:19.778538-08:00 (in 59.997300 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:42:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:42:19 PST)" (scheduled at 2017-11-13 13:42:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:43:19.468888-08:00 (in 59.998198 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:43:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:42:19 PST)" (scheduled at 2017-11-13 13:42:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:43:19.778538-08:00 (in 59.996541 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:43:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:43:19 PST)" (scheduled at 2017-11-13 13:43:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:44:19.468888-08:00 (in 59.997893 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:44:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:43:19 PST)" (scheduled at 2017-11-13 13:43:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:44:19.778538-08:00 (in 59.997440 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:44:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:44:19 PST)" (scheduled at 2017-11-13 13:44:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:45:19.468888-08:00 (in 59.998618 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:45:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:44:19 PST)" (scheduled at 2017-11-13 13:44:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:45:19.778538-08:00 (in 59.998347 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:45:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:45:19 PST)" (scheduled at 2017-11-13 13:45:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:46:19.468888-08:00 (in 59.998774 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:46:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:45:19 PST)" (scheduled at 2017-11-13 13:45:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:46:19.778538-08:00 (in 59.999107 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:46:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:46:19 PST)" (scheduled at 2017-11-13 13:46:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:47:19.468888-08:00 (in 59.998119 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:47:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:46:19 PST)" (scheduled at 2017-11-13 13:46:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:47:19.778538-08:00 (in 59.998913 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:47:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:47:19 PST)" (scheduled at 2017-11-13 13:47:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:48:19.468888-08:00 (in 59.997414 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:48:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:47:19 PST)" (scheduled at 2017-11-13 13:47:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:48:19.778538-08:00 (in 59.998747 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:48:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:48:19 PST)" (scheduled at 2017-11-13 13:48:19.468888-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:49:19.468888-08:00 (in 59.999026 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:49:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:48:19 PST)" (scheduled at 2017-11-13 13:48:19.778538-08:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:49:19.778538-08:00 (in 59.998926 seconds)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:49:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:50:19.468888-08:00 (in 59.998144 seconds)
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:50:19 PST)" (scheduled at 2017-11-13 13:49:19.468888-08:00)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:50:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:50:19.778538-08:00 (in 59.998022 seconds)
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:50:19 PST)" (scheduled at 2017-11-13 13:49:19.778538-08:00)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:50:19 PST)" executed successfully
+DEBUG:urllib3.connectionpool:Resetting dropped connection: www.instagram.com
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh/ HTTP/1.1" 200 17565
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:49:36] "POST /get-media HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:49:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:49:40] "GET /login HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET / HTTP/1.1" 200 4408
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "POST /accounts/login/ajax/ HTTP/1.1" 200 53
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET / HTTP/1.1" 200 15279
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "POST /accounts/login/ajax/ HTTP/1.1" 200 53
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:49:47] "POST /login HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:49:47] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh/ HTTP/1.1" 200 41783
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh/ HTTP/1.1" 200 41783
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh/?__a=1 HTTP/1.1" 200 24552
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /graphql/query/?query_id=17888483320059182&id=2202811075&first=100&after= HTTP/1.1" 200 21903
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (2): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (3): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (4): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (5): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (6): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (7): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (8): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (9): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (10): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (11): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (12): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (13): scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/21819587_356135818159708_677380921707462656_n.jpg HTTP/1.1" 200 161209
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /graphql/query/?query_id=17888483320059182&id=2202811075&first=100&after=AQBfdQTq26qPAp0pE-1thESoSgamnBfnyP4R1rhOg4W3K2rk5RZNIRW4B1Abp-AAbGo HTTP/1.1" 200 155
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/20478492_1736571706644017_8810255075571138560_n.jpg HTTP/1.1" 200 144338
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/21827416_116991482321886_5085078310224920576_n.jpg HTTP/1.1" 200 75269
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/13329218_938106616288366_1557414118_n.jpg HTTP/1.1" 200 77865
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/10261116_1669351629987933_1700987148_n.jpg HTTP/1.1" 200 256732
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/15876448_1870398996526992_1357480145396432896_n.jpg HTTP/1.1" 200 150946
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/12093410_1697501083802195_747080037_n.jpg HTTP/1.1" 200 170023
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/13658458_1762206297328604_1448499968_n.jpg HTTP/1.1" 200 236949
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/18160678_212329175924636_2308830901997404160_n.jpg HTTP/1.1" 200 91471
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/13395010_295652190771835_1495645940_n.jpg HTTP/1.1" 200 37204
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/19228752_1176210885818643_6157067349481488384_n.jpg HTTP/1.1" 200 211164
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/19955020_1271263336332631_2327769538814279680_n.jpg HTTP/1.1" 200 170105
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: scontent-lax3-1.cdninstagram.com
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: scontent-lax3-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:https://scontent-lax3-1.cdninstagram.com:443 "GET /t51.2885-15/e35/19379659_241624409666638_5974404460556845056_n.jpg HTTP/1.1" 200 153886
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: scontent-lax3-1.cdninstagram.com
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 13:49:55] "POST /get-media HTTP/1.1" 200 -
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:51:19.468888-08:00 (in 59.999003 seconds)
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:51:19 PST)" (scheduled at 2017-11-13 13:50:19.468888-08:00)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:51:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:51:19.778538-08:00 (in 59.998919 seconds)
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:51:19 PST)" (scheduled at 2017-11-13 13:50:19.778538-08:00)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:51:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:52:19.468888-08:00 (in 59.998989 seconds)
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:52:19 PST)" (scheduled at 2017-11-13 13:51:19.468888-08:00)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:52:19 PST)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 13:52:19.778538-08:00 (in 59.998591 seconds)
+INFO:apscheduler.executors.default:Running job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:52:19 PST)" (scheduled at 2017-11-13 13:51:19.778538-08:00)
+INFO:apscheduler.executors.default:Job "wipe_dl_and_zip (trigger: interval[0:01:00], next run at: 2017-11-13 13:52:19 PST)" executed successfully
+INFO:werkzeug: * Detected change in '/home/calvin/Desktop/Margatsni/Margatsni/__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 14:21:34.733816-08:00 (in 1799.997299 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 337-538-313
+INFO:werkzeug: * Detected change in '/home/calvin/Desktop/Margatsni/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-13 14:21:55.302369-08:00 (in 1799.997012 seconds)
