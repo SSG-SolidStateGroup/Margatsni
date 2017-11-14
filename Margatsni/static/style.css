@@ -60,6 +60,7 @@ input[type=text] {
     border-radius: 30px;
     box-sizing: border-box;
     text-align: center;
+    outline:none !important;
 }
 
 input[type=username],
@@ -72,6 +73,7 @@ input[type=password] {
     border-radius: 30px;
     box-sizing: border-box;
     text-align: center;
+    outline:none !important;
 }
 
 
