@@ -20,8 +20,10 @@
     </ul>
     {% endif %} {% endwith %} {% block body %}{% endblock %}
     <form class="container" action="/get-media" method="post">
-        <input type="text" placeholder="'user', 'https://www.instagram.com/instagram/', or 'https://www.instagram.com/p/BbVLoAeBUo-/?taken-by=instagram' " name="target">
-        <button class="button">Get Photos</button>
+        <div id='focusOnEnter'>
+            <input type="text" placeholder="'user', 'https://www.instagram.com/instagram/', or 'https://www.instagram.com/p/BbVLoAeBUo-/?taken-by=instagram' " name="target">
+            <button class="button">Get Photos</button>
+        </div>
     </form>
     {% if not session['logged_in'] %}
     <a class="button" href="{{url_for('login')}}">Login</a> {% else %}
@@ -31,6 +33,13 @@
         <a class="button" href="{{url_for('logout')}}">Logout</a>
     </div>
     {% endif %}
+
+    <script>
+        window.onload = function({
+            document.getElementById('focusOnEnter').focus();
+        })
+
+    </script>
 </body>
 
 </html>
