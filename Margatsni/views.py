@@ -6,13 +6,11 @@ import os, requests, shutil, json, concurrent.futures, tqdm, re
 
 LOGIN_URL = "https://www.instagram.com/accounts/login/ajax/"
 logged_in = False
-api = InstagramScraper( media_types=['image','carousel','video'],
-						maximum=100 )
+api = InstagramScraper( media_types=['image','carousel'], maximum=100 )
 
 # main page
 @app.route('/')
 def index():
-
 	return render_template('index.html')
 
 # log-in page, will detect invalid logins
@@ -44,16 +42,6 @@ def logout():
 	api.logout()
 	return redirect('/')
 
-def validateUser():
-	s = requests.Session()
-	s.headers.update({'Referer': "https://www.instagram.com"})
-	req = s.get("https://www.instagram.com")
-	s.headers.update({'X-CSRFToken': req.cookies['csrftoken']})
-	login_data = {'username': session['login_user'], 'password': session['login_pass']}
-	login = s.post(LOGIN_URL, data=login_data, allow_redirects=True)
-	s.headers.update({'X-CSRFToken': login.cookies['csrftoken']})
-	return json.loads(login.text), login
-
 # takes input from user as instagram user name, profile url, or user's photo url
 # and retrieves image(s)/video(s) from given input
 @app.route('/get-media', methods=['GET', 'POST'])
@@ -64,11 +52,11 @@ def get_media():
 		pieces = target.split('/')
 
 		if 'p' in pieces:
-			json_text = create_json_text(img_url)
-			is_private = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']['is_private']
+			json_text = create_json_text(target)
+			entry_data = json_text['entry_data']
 
-			if is_private and not logged_in:
-				flash('User is private. You will need to log in to retrieve media.')
+			if not entry_data and not logged_in:
+				flash('User is private. You will need to log in and follow this user to retrieve media.')
 				return redirect('/')
 			else:
 				file_path, base_name = get_single_photo(target)
@@ -85,17 +73,27 @@ def get_media():
 			is_private = json_text['entry_data']['ProfilePage'][0]['user']['is_private']
 
 			if is_private and not logged_in:
-				flash('User is private. You will need to log in to retrieve media.')
+				flash('User is private. You will need to log in and follow this user to retrieve media.')
 				return redirect('/')
 			else:
 				zip_fname = get_target_batch(target)
 				return send_file( filename_or_fp = '../zip_files/' + zip_fname,
 								  as_attachment=True,
 								  attachment_filename=zip_fname)
-	except (ValueError, KeyError) as e:
+	except (KeyError) as e:
 		flash('Not a valid instagram user.')
 		pass
 		return redirect('/')
+
+def validateUser():
+	s = requests.Session()
+	s.headers.update({'Referer': "https://www.instagram.com"})
+	req = s.get("https://www.instagram.com")
+	s.headers.update({'X-CSRFToken': req.cookies['csrftoken']})
+	login_data = {'username': session['login_user'], 'password': session['login_pass']}
+	login = s.post(LOGIN_URL, data=login_data, allow_redirects=True)
+	s.headers.update({'X-CSRFToken': login.cookies['csrftoken']})
+	return json.loads(login.text), login
 
 # retrieves batch file of all of target's media
 def get_target_batch(target):
@@ -144,8 +142,7 @@ def get_single_photo(img_url):
 	json_text = create_json_text(img_url)
 	url = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['display_url']
 
-	username = str(session['login_user']) + '_session'
-	dst = './downloads/' + username
+	dst = './downloads/'
 
 	create_dir(dst)
 
@@ -166,6 +163,10 @@ def get_single_photo(img_url):
 
 #formats script portion of html to create json text
 def create_json_text(url):
+	pieces = url.split('/')
+	if 'http:' not in pieces or 'https:' not in pieces:
+		url = 'https://' + url
+
 	r = api.session.get(url)
 	soup = BeautifulSoup(r.text)
 	script = soup.find('script', type=["text/javascript"], string=re.compile("window._sharedData"))

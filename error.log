@@ -236,3 +236,232 @@ INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:19:24] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:19:24] "GET /static/style.css HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:19:26] "GET /login HTTP/1.1" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-14 00:15:32.258725-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-14 00:15:33.572717-08:00 (in 1799.996488 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 596-492-185
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:45:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:45:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:46:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:46:39] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:46:39] "GET /static/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:46:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:46:57] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2017 23:46:58] "GET /static/favicon.ico HTTP/1.1" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-16 23:01:40.693379-08:00 (in 1799.986137 seconds)
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-16 23:01:42.181429-08:00 (in 1799.996489 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 596-492-185
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:43] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:43] "GET /static/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:47] "POST /get-media HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:47] "GET /get-media?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:47] "GET /get-media?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:47] "GET /get-media?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:47] "GET /get-media?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:47] "GET /get-media?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:31:57] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:32:02] "POST /login HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:32:02] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:32:02] "GET /login?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:32:02] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:32:02] "GET /login?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:32:02] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:32:02] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Projects\\CS480\\CS480-Project\\Margatsni\\Margatsni\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-16 23:04:08.232593-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-16 23:04:09.512993-08:00 (in 1799.996488 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 596-492-185
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:34:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:34:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:34:13] "POST /get-media HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:34:13] "GET /get-media?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:34:13] "GET /get-media?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:34:13] "GET /get-media?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:34:13] "GET /get-media?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:34:13] "GET /get-media?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:44] "POST /get-media HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:44] "GET /get-media?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:44] "GET /get-media?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:44] "GET /get-media?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:44] "GET /get-media?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:44] "GET /get-media?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-16 23:05:49.969175-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-16 23:05:51.262083-08:00 (in 1799.996488 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 596-492-185
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:52] "POST /get-media HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:52] "GET /get-media?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:52] "GET /get-media?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:52] "GET /get-media?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:52] "GET /get-media?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:35:52] "GET /get-media?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:12] "POST /get-media HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:12] "GET /get-media?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:12] "GET /get-media?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:12] "GET /get-media?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:12] "GET /get-media?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:12] "GET /get-media?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Projects\\CS480\\CS480-Project\\Margatsni\\Margatsni\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-16 23:06:29.637292-08:00 (in 1799.996487 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 596-492-185
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'D:\\Projects\\CS480\\CS480-Project\\Margatsni\\Margatsni\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-16 23:06:39.735167-08:00 (in 1799.996989 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 596-492-185
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:40] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET // HTTP/1.1" 404 20150
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:42] "POST /get-media HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:43] "GET /login HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET / HTTP/1.1" 200 4450
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "POST /accounts/login/ajax/ HTTP/1.1" 200 54
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:36:49] "POST /login HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET / HTTP/1.1" 200 4421
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "POST /accounts/login/ajax/ HTTP/1.1" 200 53
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET / HTTP/1.1" 200 15421
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "POST /accounts/login/ajax/ HTTP/1.1" 200 53
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:03] "POST /login HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:03] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh/ HTTP/1.1" 200 41937
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:06] "POST /get-media HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:06] "GET /get-media?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:06] "GET /get-media?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:06] "GET /get-media?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:06] "GET /get-media?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:06] "GET /get-media?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:39] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh/ HTTP/1.1" 200 41937
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh/ HTTP/1.1" 200 41937
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /kellynieh/?__a=1 HTTP/1.1" 200 24552
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /graphql/query/?query_id=17888483320059182&id=2202811075&first=100&after= HTTP/1.1" 200 21903
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (2): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (3): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (4): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (5): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (6): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (7): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (8): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (9): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (10): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (11): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (12): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (13): scontent-sjc2-1.cdninstagram.com
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /graphql/query/?query_id=17888483320059182&id=2202811075&first=100&after=AQDsomRh6_o7_l4PrFpTtI3mihc4XxnezatwkhxTUPDmA534AvRv1aqztF4PCqZY-TY HTTP/1.1" 200 155
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/20478492_1736571706644017_8810255075571138560_n.jpg HTTP/1.1" 200 144338
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/21827416_116991482321886_5085078310224920576_n.jpg HTTP/1.1" 200 75269
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/19228752_1176210885818643_6157067349481488384_n.jpg HTTP/1.1" 200 211164
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/12093410_1697501083802195_747080037_n.jpg HTTP/1.1" 200 170023
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/21819587_356135818159708_677380921707462656_n.jpg HTTP/1.1" 200 161209
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/15876448_1870398996526992_1357480145396432896_n.jpg HTTP/1.1" 200 150946
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/18160678_212329175924636_2308830901997404160_n.jpg HTTP/1.1" 200 91471
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/19955020_1271263336332631_2327769538814279680_n.jpg HTTP/1.1" 200 170105
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/13395010_295652190771835_1495645940_n.jpg HTTP/1.1" 200 37204
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/13329218_938106616288366_1557414118_n.jpg HTTP/1.1" 200 77865
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/10261116_1669351629987933_1700987148_n.jpg HTTP/1.1" 200 256732
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/13658458_1762206297328604_1448499968_n.jpg HTTP/1.1" 200 236949
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/19379659_241624409666638_5974404460556845056_n.jpg HTTP/1.1" 200 153886
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: scontent-sjc2-1.cdninstagram.com
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: scontent-sjc2-1.cdninstagram.com
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: scontent-sjc2-1.cdninstagram.com
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:37:45] "POST /get-media HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:38:11] "POST /get-media HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:38:11] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /peppity_pep/ HTTP/1.1" 200 27913
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /peppity_pep HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /peppity_pep/ HTTP/1.1" 200 27913
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /peppity_pep/?__a=1 HTTP/1.1" 200 10420
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /graphql/query/?query_id=17888483320059182&id=6420483144&first=100&after= HTTP/1.1" 200 8492
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/23498053_155419221738882_2965471976388296704_n.jpg HTTP/1.1" 200 73663
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/23594917_291390274700019_1910169142774726656_n.jpg HTTP/1.1" 200 229343
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/23498826_1707479295950023_4566451096448401408_n.jpg HTTP/1.1" 200 78583
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/23595842_1430283580413257_2050497977876742144_n.jpg HTTP/1.1" 200 143775
+DEBUG:urllib3.connectionpool:https://scontent-sjc2-1.cdninstagram.com:443 "GET /t51.2885-15/e35/23498618_129932671024017_4910869707940167680_n.jpg HTTP/1.1" 200 72378
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /graphql/query/?query_id=17888483320059182&id=6420483144&first=100&after=AQBEYZ9fPcSLhHowUEsYTpqagjRH9gMAuS4GXcrsAqyAKCuP63P-JRkPN1WUIcZX8yE HTTP/1.1" 200 154
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:38:16] "POST /get-media HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:38:25] "POST /get-media HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:38:25] "GET /get-media?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:38:25] "GET /get-media?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:38:25] "GET /get-media?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:38:25] "GET /get-media?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2017 22:38:25] "GET /get-media?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Projects\\CS480\\CS480-Project\\Margatsni\\Margatsni\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-16 23:11:34.891734-08:00 (in 1799.996487 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 596-492-185
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-17 00:25:53.717155-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
