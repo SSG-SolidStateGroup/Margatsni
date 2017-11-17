@@ -80,7 +80,7 @@ def get_media():
 				return send_file( filename_or_fp = '../zip_files/' + zip_fname,
 								  as_attachment=True,
 								  attachment_filename=zip_fname)
-	except (KeyError) as e:
+	except (KeyError, ValueError) as e:
 		flash('Not a valid instagram user.')
 		pass
 		return redirect('/')
@@ -164,7 +164,7 @@ def get_single_photo(img_url):
 #formats script portion of html to create json text
 def create_json_text(url):
 	pieces = url.split('/')
-	if 'http:' not in pieces or 'https:' not in pieces:
+	if 'http:' not in pieces and 'https:' not in pieces:
 		url = 'https://' + url
 
 	r = api.session.get(url)
