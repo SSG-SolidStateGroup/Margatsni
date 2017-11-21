@@ -8,7 +8,7 @@ def get_single_photo(img_url):
 	json_text = create_json_text(img_url)
 	url = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['display_url']
 
-	dst = '/downloads/dl_test'
+	dst = os.path.dirname(os.path.realpath(__file__)) + '/dl_test/'
 
 	create_dir(dst)
 
@@ -44,7 +44,7 @@ def get_target_batch(target):
 		api.last_scraped_filemtime = 0
 		future_to_item = {}
 
-		dst = '/downloads/' + username
+		dst = os.path.dirname(os.path.realpath(__file__)) + '/' + username + '/'
 		create_dir(dst)
 
 		# Get the user metadata.
@@ -92,10 +92,10 @@ def create_dir(dst):
 def create_zip(username, zip_fname, dst):
 	shutil.make_archive(username, 'zip', dst)
 	try:
-		shutil.move(zip_fname, '/zip_files/' + zip_fname)
+		shutil.move(zip_fname, './zip_files/' + zip_fname)
 	except shutil.Error:
-		os.remove('/zip_files/' + zip_fname)
-		shutil.move(zip_fname, '/zip_files/' + zip_fname)
+		os.remove('//zip_files/' + zip_fname)
+		shutil.move(zip_fname, './zip_files/' + zip_fname)
 		pass
 
 class TestDownload(unittest.TestCase):
