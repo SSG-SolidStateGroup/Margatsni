@@ -29,7 +29,7 @@ def get_single_photo(img_url):
 
 def get_target_batch(target):
 	executor=concurrent.futures.ThreadPoolExecutor(max_workers=20)
-	
+
 	blacklist = ['https:', '', 'www.instagram.com']
 	pieces = target.split('/')
 	for p in pieces:
@@ -65,7 +65,7 @@ def get_target_batch(target):
 
 		if (api.media_metadata or api.comments or api.include_location) and api.posts:
 			api.save_json(api.posts, '{0}/{1}.json'.format(dst, username))
-	
+
 	create_zip(username, 'instagram.zip', dst)
 	return zip_fname, dst
 
@@ -119,8 +119,14 @@ class TestDownload(unittest.TestCase):
 		target = 'https://www.instagram.com/instagram/'
 		zip_fname, dl_dst = get_target_batch(target)
 		zip_path = os.path.dirname(os.path.realpath(__file__)) + './instagram.zip'
-		is_file_in_path = os.path.isfile(zip_path)	
+		is_file_in_path = os.path.isfile(zip_path)
 		self.assertTrue(is_file_in_path)
 
 if __name__ == '__main__':
-	unittest.main()
+	#unittest.main()
+	target = 'https://www.instagram.com/instagram/'
+	zip_fname, dl_dst = get_target_batch(target)
+	zip_path = os.path.dirname(os.path.realpath(__file__)) + '/instagram.zip'
+	is_file_in_path = os.path.isfile(zip_path)
+	print(zip_path)
+	print(is_file_in_path)
