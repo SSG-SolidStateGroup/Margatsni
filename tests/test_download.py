@@ -118,7 +118,7 @@ class TestDownload(unittest.TestCase):
 	def test_get_batch_user_link(self):
 		target = 'https://www.instagram.com/instagram/'
 		zip_fname, dl_dst = get_target_batch(target)
-		zip_path = os.path.dirname(os.path.realpath(__file__)) + '/instagram/instagram.zip'
+		zip_path = os.path.dirname(os.path.realpath(__file__)) + '/instagram.zip'
 		is_file_in_path = os.path.isfile(zip_path)	
 		self.assertTrue(is_file_in_path)
 
