@@ -75,7 +75,7 @@ def create_json_text(url):
 		url = 'https://' + url
 
 	r = api.session.get(url)
-	soup = BeautifulSoup(r.text)
+	soup = BeautifulSoup(r.text, "html.parser")
 	script = soup.find('script', type=["text/javascript"], string=re.compile("window._sharedData"))
 	temp = re.search(r'^\s*window._sharedData\s*=\s*({.*?})\s*;\s*$', script.string, flags=re.DOTALL | re.MULTILINE).group(1)
 	json_text = json.loads(temp)
@@ -99,33 +99,27 @@ def create_zip(username, zip_fname, dst):
 		pass'''
 
 class TestDownload(unittest.TestCase):
-	# test checks single downloads, deletes photo afterwards
+	# test checks single downloads
 	def test_get_single_photo(self):
 		target = 'https://www.instagram.com/p/BbDB730DcY8/?taken-by=instagram'
 		file_path, base_name = get_single_photo(target)
 		is_file_in_path = os.path.isfile(file_path)
-		os.remove(file_path)
-		api.session.close()
 		self.assertTrue(is_file_in_path)
 
-	# test checks batch downloads with 'username', deletes zip file and download afterwards
+	# test checks batch downloads with 'username'
 	def test_get_batch_user(self):
 		target = 'instagram'
 		zip_fname, dl_dst = get_target_batch(target)
 		zip_path= os.path.dirname(os.path.realpath(__file__)) + '/instagram/' + zip_fname
 		is_file_in_path = os.path.isfile(zip_path)
-		os.remove(zip_path)
-		shutil.rmtree(dl_dst)
 		self.assertTrue(is_file_in_path)
 
-	# test checks batch downloads with target link, deletes zip file and download afterwards
+	# test checks batch downloads with target link
 	def test_get_batch_user_link(self):
 		target = 'https://www.instagram.com/instagram/'
 		zip_fname, dl_dst = get_target_batch(target)
 		zip_path = os.path.dirname(os.path.realpath(__file__)) + '/instagram/' + zip_fname
 		is_file_in_path = os.path.isfile(zip_path)	
-		os.remove(zip_path)
-		shutil.rmtree(dl_dst)
 		self.assertTrue(is_file_in_path)
 
 if __name__ == '__main__':
