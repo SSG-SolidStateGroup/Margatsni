@@ -142,7 +142,7 @@ def get_single_photo(img_url):
 	json_text = create_json_text(img_url)
 	url = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['display_url']
 
-	dst = './downloads/'
+	dst = './downloads/single_photos'
 
 	create_dir(dst)
 

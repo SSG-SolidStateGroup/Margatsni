@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="2" errors="0" failures="0" skip="0"><testcase classname="test_download.TestDownload" name="test_downloads" time="0.419"></testcase><testcase classname="test_download.TestDownload" name="test_zip_files" time="0.302"></testcase></testsuite>
