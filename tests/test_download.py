@@ -44,7 +44,7 @@ def get_target_batch(target):
 		api.last_scraped_filemtime = 0
 		future_to_item = {}
 
-		dst = os.path.dirname(os.path.realpath(__file__)) + '/' + username + '/'
+		dst = './downloads/' + username
 		create_dir(dst)
 
 		# Get the user metadata.
@@ -94,7 +94,7 @@ def create_zip(username, zip_fname, dst):
 	try:
 		shutil.move(zip_fname, './zip_files/' + zip_fname)
 	except shutil.Error:
-		os.remove('//zip_files/' + zip_fname)
+		os.remove('./zip_files/' + zip_fname)
 		shutil.move(zip_fname, './zip_files/' + zip_fname)
 		pass
 
