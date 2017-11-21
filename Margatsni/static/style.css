@@ -14,37 +14,48 @@ a {
 
 body {
     color: #fff;
+    background: linear-gradient(270deg, #8a3ab9, #4c68d7, #cd486b, #fbad50, #fccc63, #bc2a8d, #e95950);
+    background-size: 1400% 1400%;
 
-
-background: linear-gradient(270deg, #13547a, #868f96, #596164, #1e3c72, #2a5298);
-background-size: 1000% 1000%;
-
--webkit-animation: AnimationName 30s ease infinite;
--moz-animation: AnimationName 30s ease infinite;
--o-animation: AnimationName 30s ease infinite;
-animation: AnimationName 30s ease infinite;
-
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
-@-o-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 p {
@@ -60,7 +71,7 @@ input[type=text] {
     border-radius: 30px;
     box-sizing: border-box;
     text-align: center;
-    outline:none !important;
+    outline: none !important;
 }
 
 input[type=username],
@@ -73,8 +84,9 @@ input[type=password] {
     border-radius: 30px;
     box-sizing: border-box;
     text-align: center;
-    outline:none !important;
+    outline: none !important;
 }
+
 
 
 
@@ -135,6 +147,7 @@ input[type=password] {
 .flashes {
     text-align: inherit;
 }
+
 
 
 
