@@ -66,7 +66,7 @@ def get_target_batch(target):
 		if (api.media_metadata or api.comments or api.include_location) and api.posts:
 			api.save_json(api.posts, '{0}/{1}.json'.format(dst, username))
 	
-	create_zip(username, zip_fname, dst)
+	create_zip(username, 'instagram.zip', dst)
 	return zip_fname, dst
 
 def create_json_text(url):
@@ -110,7 +110,7 @@ class TestDownload(unittest.TestCase):
 	def test_get_batch_user(self):
 		target = 'instagram'
 		zip_fname, dl_dst = get_target_batch(target)
-		zip_path= os.path.dirname(os.path.realpath(__file__)) + '/instagram.zip'
+		zip_path= os.path.dirname(os.path.realpath(__file__)) + '/instagram/instagram.zip'
 		is_file_in_path = os.path.isfile(zip_path)
 		self.assertTrue(is_file_in_path)
 
@@ -118,8 +118,7 @@ class TestDownload(unittest.TestCase):
 	def test_get_batch_user_link(self):
 		target = 'https://www.instagram.com/instagram/'
 		zip_fname, dl_dst = get_target_batch(target)
-		zip_path = os.path.dirname(os.path.realpath(__file__)) + '/instagram.zip'
-		print(zip_path)
+		zip_path = os.path.dirname(os.path.realpath(__file__)) + '/instagram/instagram.zip'
 		is_file_in_path = os.path.isfile(zip_path)	
 		self.assertTrue(is_file_in_path)
 
