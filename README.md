@@ -10,8 +10,8 @@ A web based tool, Margatnsi is being developed by SolidStateGroup as an Instagra
 	$ pip install -r requirements.txt	
 
 ### Members:
-* Calvin Teng
 * Ismail Abbas
 * Oscar Alcaraz
 * Brandon Nguyen
 * Aaron Reyes
+* Calvin Teng
