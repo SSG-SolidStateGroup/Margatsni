@@ -708,3 +708,29 @@ WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: s
 WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: scontent-sjc2-1.cdninstagram.com
 WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: scontent-sjc2-1.cdninstagram.com
 INFO:werkzeug:127.0.0.1 - - [17/Nov/2017 00:20:54] "POST /get-media HTTP/1.1" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-23 11:08:21.397047+00:00 (in 1799.991765 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:28] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:28] "GET /static/favicon.png HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:32] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:35] "GET /help HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:35] "GET /static/img/single_photo.png HTTP/1.1" 404 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:35] "GET /static/img/mobile_link1.png HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:36] "GET /static/img/mobile_link2.png HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:37] "GET /static/img/batch_user.png HTTP/1.1" 404 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:37] "GET /static/img/batch_link.png HTTP/1.1" 404 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:42] "GET /help HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:42] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:42] "GET /static/img/single_photo.png HTTP/1.1" 404 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:42] "GET /static/img/mobile_link1.png HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:43] "GET /static/img/mobile_link2.png HTTP/1.1" 200 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:44] "GET /static/img/batch_link.png HTTP/1.1" 404 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:44] "GET /static/img/batch_user.png HTTP/1.1" 404 -
+INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:44] "GET /static/favicon.png HTTP/1.1" 200 -
