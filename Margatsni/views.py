@@ -6,7 +6,9 @@ import os, requests, shutil, json, concurrent.futures, tqdm, re
 
 LOGIN_URL = "https://www.instagram.com/accounts/login/ajax/"
 logged_in = False
-api = InstagramScraper( media_types=['image','carousel'], maximum=100 )
+api = InstagramScraper( media_types=['image','story', 'video'], maximum=100 )
+
+'''------------------------------------------------------- page views ----------------------------------------------------'''
 
 # main page
 @app.route('/')
@@ -59,11 +61,26 @@ def get_media():
 			json_text = create_json_text(target)
 			entry_data = json_text['entry_data']
 
+			if entry_data:
+				is_video = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['is_video']
+				type_name = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['__typename']
+			else:
+				is_video = False
+				type_name = None
+
 			if not entry_data and not logged_in:
 				flash('User is private. You will need to log in and follow this user to retrieve media.')
 				return redirect('/')
 			else:
-				file_path, base_name = get_single_photo(target)
+				if is_video:
+					file_path, base_name = get_video(target)
+				elif type_name == "GraphSidecar":
+					zip_fname = get_graph_sidecar(target)
+					return send_file( filename_or_fp = '../zip_files/' + zip_fname,
+								  as_attachment=True,
+								  attachment_filename=zip_fname)
+				else:
+					file_path, base_name = get_single_photo(target)
 				return send_file( filename_or_fp = '../' + file_path,
 								  as_attachment=True,
 				 				  attachment_filename=base_name )
@@ -89,7 +106,7 @@ def get_media():
 		flash('Not a valid instagram user.')
 		pass
 		return redirect('/')
-
+'''-------------------------------------------------------helper functions----------------------------------------------------'''
 def validateUser():
 	s = requests.Session()
 	s.headers.update({'Referer': "https://www.instagram.com"})
@@ -99,6 +116,58 @@ def validateUser():
 	login = s.post(LOGIN_URL, data=login_data, allow_redirects=True)
 	s.headers.update({'X-CSRFToken': login.cookies['csrftoken']})
 	return json.loads(login.text), login
+
+def get_video(target):
+	json_text = create_json_text(target)
+	url = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['video_url']
+
+	dst = './downloads/single_videos'
+
+	create_dir(dst)
+
+	#saves all photos in directory made above
+	base_name = url.split('/')[-1].split('?')[0]
+	file_path = os.path.join(dst, base_name)
+	r = requests.get(url)
+	if not os.path.isfile(file_path):
+		with open(file_path, 'wb') as media_file:
+				try:
+					content = r.content
+				except requests.exceptions.ConnectionError:
+					time.sleep(5)
+					content = r.content
+				media_file.write(content)
+
+	return file_path, base_name
+
+#retrieves carousel posts (posts with multiple images)
+def get_graph_sidecar(target):
+	img_urls = []
+	json_text = create_json_text(target)
+	sidecar = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['edge_sidecar_to_children']['edges']
+	owner = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']['username'] + '_carousel'
+	zip_fname = owner + '.zip'
+	for edge in sidecar:
+		img_urls.append(edge['node']['display_url'])
+
+	dst = './downloads/' + owner
+	create_dir(dst)
+
+	for url in img_urls:
+		base_name = url.split('/')[-1].split('?')[0]
+		file_path = os.path.join(dst, base_name)
+		r = requests.get(url)
+		if not os.path.isfile(file_path):
+			with open(file_path, 'wb') as media_file:
+					try:
+						content = r.content
+					except requests.exceptions.ConnectionError:
+						time.sleep(5)
+						content = r.content
+					media_file.write(content)
+
+	create_zip(owner, zip_fname, dst)
+	return zip_fname
 
 # retrieves batch file of all of target's media
 def get_target_batch(target):

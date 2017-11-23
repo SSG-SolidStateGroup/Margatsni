@@ -16,29 +16,37 @@
     <h1 class="title"><a href="{{url_for('index')}}"> Margatsni </a></h1>
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'SinglePhoto')" id="defaultOpen">Single Photo</button>
-        <button class="tablinks" onclick="openTab(event, 'MultiplePhotos')">Mutliple Photos</button>
+        <button class="tablinks" onclick="openTab(event, 'BatchPhotos')">Batch Photos</button>
+        <button class="tablinks" onclick="openTab(event, 'PrivateUsers')">Private Users</button>   
     </div>
     <div id="SinglePhoto" class="tabcontent">
-        <p>Simply paste in the link of the photo you would like to download and click 'Get Photos'.</p>
+        <p>Simply paste in the link of the Instagram post you would like to download and click 'Get Media'.</p>
         <img class="help-photos" src="../static/img/single_photo.png">
         <br>
-        <p>Finding an image link on your mobile device.</p>
+        <p>Finding an Instagram's post link on your mobile device.</p>
         <img style="height: 40%; width: 40%; display: inline-block; padding: 0 20px 0 20px;" class="help-photos" src="../static/img/mobile_link1.png">
         <img style="height: 40%; width: 40%; display: inline-block; padding: 0 20px 0 20px;" class="help-photos" src="../static/img/mobile_link2.png">
     </div>
-    <div id="MultiplePhotos" class="tabcontent">
-        <p>Type in the name of the Instagram user of whose photos you would like to download and click 'Get Photos'.</p>
+    <div id="BatchPhotos" class="tabcontent">
+        <p>Type in the name of the Instagram user of whose media you would like to download and click 'Get Media'.</p>
         <img class="help-photos" src="../static/img/batch_user.png">
         <br>
-        <p>Or paste the link of the user's profile and click 'Get Photos'.</p>
+        <p>Or paste the link of the user's profile and click 'Get Media'.</p>
         <img class="help-photos" src="../static/img/batch_link.png">
+    </div>
+    <div id="PrivateUsers" class="tabcontent">
+        <p>To obtain photos of private users that you follow, you will first need to log in.</p>
+        <img class="help-photos" src="../static/img/login_help.png">
+        <br>
+        <p>If this is the first time using our site, you may need to log in separately through Instagram to verify access for our server to access your account.</p>
+        <p style="font-size: 13px">**Note: We do not store any credentials entered**</p>
     </div>
     <footer class="footer-distributed">
         <div class="footer-left">
             <p class="footer-links">
                 <a href="{{url_for('index')}}">Home</a> ·
                 <a href="{{url_for('help')}}">Help</a> ·
-                <a href="http://cs480-projects.github.io/teams-fall2017/SSG/index.html">Developers</a> 
+                <a href="http://cs480-projects.github.io/teams-fall2017/SSG/index.html">Developers</a>
             </p>
             <p>SSG &copy; 2017</p>
         </div>
