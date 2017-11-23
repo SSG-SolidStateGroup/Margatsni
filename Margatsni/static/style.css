@@ -79,7 +79,7 @@ input[type=text] {
 
 input[type=username],
 input[type=password] {
-    width: 80%;
+    width: 300px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -122,22 +122,6 @@ footer {
     text-align: center;
     cursor: pointer;
     background-color: #292c2f;
-    border-radius: 30px;
-}
-
-.login {
-    height: 200px;
-    width: 400px;
-    background: relative;
-    display: block;
-    width: 35%;
-    margin: 10px auto;
-    font-family: "Domine", cursive;
-    font-size: 25px;
-    outline: none;
-    color: white;
-    border: none;
-    text-align: center;
     border-radius: 30px;
 }
 
