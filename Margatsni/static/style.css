@@ -63,7 +63,7 @@ p {
 }
 
 input[type=text] {
-    width: 60%;
+    width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -87,9 +87,12 @@ input[type=password] {
     outline: none !important;
 }
 
-
-
-
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 
 /* CSS for classes */
 
@@ -107,14 +110,14 @@ input[type=password] {
     display: block;
     width: 300px;
     margin: 10px auto;
-    font-family: "Domine", cursive;
+    font: normal 16px sans-serif;
     font-size: 25px;
     outline: none;
     color: white;
     border: none;
     text-align: center;
     cursor: pointer;
-    background-color: black;
+    background-color: #292c2f;
     border-radius: 30px;
 }
 
@@ -148,8 +151,89 @@ input[type=password] {
     text-align: inherit;
 }
 
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #292c2f;
+}
 
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: white;
+}
 
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #3d4144;
+}
 
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #181a1c;
+}
 
-/* CSS for divs */
+/* Style the tab content */
+.tabcontent {
+    text-align: center;
+    font-size: 17px;
+    display: none;
+    padding: 6px 6px 12px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #292c2f;
+    height: 100%;
+    margin: 0;
+}
+
+.help-photos {
+    padding-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*----------------------------------- CSS for footer -----------------------------------------*/
+.footer-distributed{
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+
+    padding: 20px 20px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+    color:  #8f9296;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+    font-size:14px;
+    font-weight: bold;
+    color:  #ffffff;
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+}

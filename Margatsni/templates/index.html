@@ -6,24 +6,27 @@
     <title>Margatsni - Instagram Photo Downloader</title>
     <meta name="description" content="Margatsni - Instagram Photo Downloader">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Domine|Sofia" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="../static/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <h1 class="title"><a href="{{url_for('index')}}"> Margatsni </a></h1> {% with messages = get_flashed_messages() %} {% if messages %}
+    <h1 class="title"><a href="{{url_for('index')}}"> Margatsni </a></h1> 
+    {% with messages = get_flashed_messages() %} {% if messages %}
     <ul class=flashes>
         {% for message in messages %}
         <p>{{ message }}</p>
         {% endfor %}
     </ul>
     {% endif %} {% endwith %} {% block body %}{% endblock %}
-    <form class="container" action="/get-media" method="post">
+    
+    <form class="container" name="user-link" action="/get-media" method="post">
         <input type="text" placeholder="'user', 'https://www.instagram.com/instagram/', or 'https://www.instagram.com/p/BbVLoAeBUo-/?taken-by=instagram' " name="target" autofocus>
-        <button class="button">Get Photos</button>
-
+        <button type="submit" class="button">Get Photos</button>
     </form>
+    
     {% if not session['logged_in'] %}
     <a class="button" href="{{url_for('login')}}">Login</a> {% else %}
     <br>
@@ -32,7 +35,16 @@
         <a class="button" href="{{url_for('logout')}}">Logout</a>
     </div>
     {% endif %}
-
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <p class="footer-links">
+                <a href="{{url_for('index')}}">Home</a> ·
+                <a href="{{url_for('help')}}">Help</a> ·
+                <a href="http://cs480-projects.github.io/teams-fall2017/SSG/index.html">Developers</a> 
+            </p>
+            <p>SSG &copy; 2017</p>
+        </div>
+    </footer>
 </body>
 
 </html>

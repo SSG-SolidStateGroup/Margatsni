@@ -2,11 +2,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Margatsni - Instagram Photo Downloader</title>
+    <title>Margatsni | Login</title>
     <meta name="description" content="Margatsni - Instagram Photo Downloader">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Domine|Sofia" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="../static/favicon.png" type="image/x-icon">
 </head>
 
@@ -21,12 +22,22 @@
     </ul>
     {% endif %} {% endwith %} {% block body %}{% endblock %}
     <div class="container">
-        <form class="login" method="post">
+        <form class="login" method="POST">
             <input type="username" placeholder="Instagram Username" name="username" value="" autofocus>
             <input type="password" placeholder="Instagram Password" name="password" value="">
             <input class="button" type="submit" value="Login">
         </form>
     </div>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <p class="footer-links">
+                <a href="{{url_for('index')}}">Home</a> ·
+                <a href="{{url_for('help')}}">Help</a> ·
+                <a href="http://cs480-projects.github.io/teams-fall2017/SSG/index.html">Developers</a> 
+            </p>
+            <p>SSG &copy; 2017</p>
+        </div>
+    </footer>
 </body>
 
 </html>

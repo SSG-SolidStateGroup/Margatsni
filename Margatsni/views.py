@@ -34,6 +34,10 @@ def login():
 			flash('Unsuccessful login.')
 	return render_template('login.html')
 
+@app.route('/help')
+def help():
+	return render_template('help.html')
+
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
 	global logged_in
@@ -80,6 +84,7 @@ def get_media():
 				return send_file( filename_or_fp = '../zip_files/' + zip_fname,
 								  as_attachment=True,
 								  attachment_filename=zip_fname)
+		return redirect('/')
 	except (KeyError, ValueError) as e:
 		flash('Not a valid instagram user.')
 		pass

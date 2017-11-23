@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Margatsni - Instagram Photo Downloader</title>
+    <meta name="description" content="Margatsni - Instagram Photo Downloader">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Domine|Sofia" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../static/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1 class="title"><a href="{{url_for('index')}}"> Margatsni </a></h1>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'SinglePhoto')" id="defaultOpen">Single Photo</button>
+        <button class="tablinks" onclick="openTab(event, 'MultiplePhotos')">Mutliple Photos</button>
+    </div>
+    <div id="SinglePhoto" class="tabcontent">
+        <p>Simply paste in the link of the photo you would like to download and click 'Get Photos'.</p>
+        <img class="help-photos" src="../static/img/single_photo.png">
+        <br>
+        <p>Finding an image link on your mobile device.</p>
+        <img style="height: 40%; width: 40%; display: inline-block; padding: 0 20px 0 20px;" class="help-photos" src="../static/img/mobile_link1.png">
+        <img style="height: 40%; width: 40%; display: inline-block; padding: 0 20px 0 20px;" class="help-photos" src="../static/img/mobile_link2.png">
+    </div>
+    <div id="MultiplePhotos" class="tabcontent">
+        <p>Type in the name of the Instagram user of whose photos you would like to download and click 'Get Photos'.</p>
+        <img class="help-photos" src="../static/img/batch_user.png">
+        <br>
+        <p>Or paste the link of the user's profile and click 'Get Photos'.</p>
+        <img class="help-photos" src="../static/img/batch_link.png">
+    </div>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <p class="footer-links">
+                <a href="{{url_for('index')}}">Home</a> ·
+                <a href="{{url_for('help')}}">Help</a> ·
+                <a href="http://cs480-projects.github.io/teams-fall2017/SSG/index.html">Developers</a> 
+            </p>
+            <p>SSG &copy; 2017</p>
+        </div>
+    </footer>
+</body>
+<script>
+function openTab(evt, item) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(item).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+</html>
