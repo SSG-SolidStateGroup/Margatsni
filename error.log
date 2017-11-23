@@ -734,3 +734,22 @@ INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:43] "GET /static/img/mobile_l
 INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:44] "GET /static/img/batch_link.png HTTP/1.1" 404 -
 INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:44] "GET /static/img/batch_user.png HTTP/1.1" 404 -
 INFO:werkzeug:68.190.224.97 - - [23/Nov/2017 10:38:44] "GET /static/favicon.png HTTP/1.1" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-23 03:15:11.506351-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-23 03:15:12.800325-08:00 (in 1799.996488 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 596-492-185
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 02:45:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 02:45:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 02:45:15] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 02:45:15] "GET /static/favicon.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 02:45:17] "GET /help HTTP/1.1" 200 -

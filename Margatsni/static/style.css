@@ -16,10 +16,13 @@ body {
     color: #fff;
     background: linear-gradient(270deg, #8a3ab9, #4c68d7, #cd486b, #fbad50, #fccc63, #bc2a8d, #e95950);
     background-size: 1400% 1400%;
-
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
     animation: AnimationName 30s ease infinite;
+
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
 }
 
 @-webkit-keyframes AnimationName {
@@ -87,12 +90,13 @@ input[type=password] {
     outline: none !important;
 }
 
-footer{
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
 }
+
 
 /* CSS for classes */
 
@@ -151,14 +155,18 @@ footer{
     text-align: inherit;
 }
 
+
 /* Style the tab */
+
 div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #292c2f;
 }
 
+
 /* Style the buttons inside the tab */
+
 div.tab button {
     background-color: inherit;
     float: left;
@@ -171,17 +179,23 @@ div.tab button {
     color: white;
 }
 
+
 /* Change background color of buttons on hover */
+
 div.tab button:hover {
     background-color: #3d4144;
 }
 
+
 /* Create an active/current tablink class */
+
 div.tab button.active {
     background-color: #181a1c;
 }
 
+
 /* Style the tab content */
+
 .tabcontent {
     text-align: center;
     font-size: 17px;
@@ -202,8 +216,10 @@ div.tab button.active {
     max-width: 100%;
 }
 
+
 /*----------------------------------- CSS for footer -----------------------------------------*/
-.footer-distributed{
+
+.footer-distributed {
     background-color: #292c2f;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
@@ -215,25 +231,26 @@ div.tab button.active {
     margin-top: 80px;
 }
 
-.footer-distributed .footer-left p{
-    color:  #8f9296;
+.footer-distributed .footer-left p {
+    color: #8f9296;
     font-size: 14px;
     margin: 0;
 }
 
+
 /* Footer links */
 
-.footer-distributed p.footer-links{
-    font-size:14px;
+.footer-distributed p.footer-links {
+    font-size: 14px;
     font-weight: bold;
-    color:  #ffffff;
+    color: #ffffff;
     margin: 0 0 5px;
     padding: 0;
 }
 
-.footer-distributed p.footer-links a{
-    display:inline-block;
+.footer-distributed p.footer-links a {
+    display: inline-block;
     line-height: 1.8;
     text-decoration: none;
-    color:  inherit;
+    color: inherit;
 }
