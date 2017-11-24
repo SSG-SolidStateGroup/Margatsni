@@ -1114,3 +1114,25 @@ INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 15:43:03] "GET /help HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 15:43:04] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 15:43:05] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 15:43:07] "GET / HTTP/1.1" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-23 21:40:24.296735-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-23 21:40:25.211854-08:00 (in 1799.996487 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-810-470
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:31] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:33] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:33] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:37] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:38] "[37mGET /help HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:41] "[37mGET / HTTP/1.1[0m" 200 -
