@@ -6,7 +6,7 @@ class Config(object):
 	JOBS = [
 		{
 			'id': 'wipe_dl_and_zip',
-			'func': 'app:wipe_dl_and_zip',
+			'func': 'Margatsni:wipe_dl_and_zip',
 			'args': (),
 			'trigger': 'interval',
 			'minutes': 30
@@ -32,4 +32,4 @@ application.config.from_object(Config())
 application.secret_key = os.urandom(32)
 scheduler = APScheduler()
 
-import app.views
+import Margatsni.views

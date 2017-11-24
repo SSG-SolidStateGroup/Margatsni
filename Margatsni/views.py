@@ -1,4 +1,4 @@
-from app import application
+from Margatsni import application
 from instagram_scraper import InstagramScraper
 from flask import Flask, request, render_template, session, redirect, flash, send_file
 from bs4 import BeautifulSoup

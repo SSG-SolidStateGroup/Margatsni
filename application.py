@@ -1,4 +1,4 @@
-from app import application, scheduler
+from Margatsni import application, scheduler
 
 if __name__ == '__main__':
 	import logging
