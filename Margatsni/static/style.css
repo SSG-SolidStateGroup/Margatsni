@@ -7,24 +7,6 @@
     }
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-body {
-    color: #fff;
-    background: linear-gradient(270deg, #8a3ab9, #4c68d7, #cd486b, #fbad50, #fccc63, #bc2a8d, #e95950);
-    background-size: 1400% 1400%;
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
-
-    min-height: 400px;
-    margin-bottom: 100px;
-    clear: both;
-}
-
 @-webkit-keyframes AnimationName {
     0% {
         background-position: 0% 50%
@@ -59,6 +41,24 @@ body {
     100% {
         background-position: 0% 50%
     }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    color: #fff;
+    background: linear-gradient(270deg, #8a3ab9, #4c68d7, #cd486b, #fbad50, #fccc63, #bc2a8d, #e95950);
+    background-size: 1400% 1400%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
 }
 
 p {
@@ -137,6 +137,7 @@ footer {
 
 .flashes {
     text-align: inherit;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 
