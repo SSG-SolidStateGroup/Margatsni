@@ -27,9 +27,9 @@ def wipe_dl_and_zip():
 	except Exception as e:
 		print(e)
 
-app = Flask(__name__)
-app.config.from_object(Config())
-app.secret_key = os.urandom(32)
+application = Flask(__name__)
+application.config.from_object(Config())
+application.secret_key = os.urandom(32)
 scheduler = APScheduler()
 
 import Margatsni.views

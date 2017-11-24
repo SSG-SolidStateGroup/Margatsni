@@ -1,4 +1,4 @@
-from Margatsni import app
+from Margatsni import application
 from instagram_scraper import InstagramScraper
 from flask import Flask, request, render_template, session, redirect, flash, send_file
 from bs4 import BeautifulSoup
@@ -11,12 +11,12 @@ api = InstagramScraper( media_types=['image','story', 'video'], maximum=100 )
 '''------------------------------------------------------- page views ----------------------------------------------------'''
 
 # main page
-@app.route('/')
+@application.route('/')
 def index():
 	return render_template('index.html')
 
 # log-in page, will detect invalid logins
-@app.route('/login', methods=['GET', 'POST'])
+@application.route('/login', methods=['GET', 'POST'])
 def login():
 	session['logged_in'] = False
 	if request.method == 'POST':
@@ -36,11 +36,11 @@ def login():
 			flash('Unsuccessful login.')
 	return render_template('login.html')
 
-@app.route('/help')
+@application.route('/help')
 def help():
 	return render_template('help.html')
 
-@app.route('/logout', methods=['GET', 'POST'])
+@application.route('/logout', methods=['GET', 'POST'])
 def logout():
 	global logged_in
 	logged_in = False
@@ -50,7 +50,7 @@ def logout():
 
 # takes input from user as instagram user name, profile url, or user's photo url
 # and retrieves image(s)/video(s) from given input
-@app.route('/get-media', methods=['GET', 'POST'])
+@application.route('/get-media', methods=['GET', 'POST'])
 def get_media():
 	try:
 		global logged_in
@@ -148,7 +148,7 @@ def get_graph_sidecar(target):
 	owner = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']['username'] + '_carousel'
 	zip_fname = owner + '.zip'
 	for edge in sidecar:
-		img_urls.append(edge['node']['display_url'])
+		img_urls.applicationend(edge['node']['display_url'])
 
 	dst = './downloads/' + owner
 	create_dir(dst)
