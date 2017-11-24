@@ -1136,3 +1136,29 @@ INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:37] "[37mGET /login HTTP/1.1[0m
 INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:37] "[37mGET / HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:38] "[37mGET /help HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [23/Nov/2017 21:10:41] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-24 13:26:01.653270-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-24 13:26:02.945805-08:00 (in 1799.996488 seconds)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 596-492-185
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:08] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:13] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:13] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:14] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:16] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:18] "[37mGET /help HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:18] "[36mGET /static/img/single_photo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:18] "[36mGET /static/img/mobile_link1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:18] "[36mGET /static/img/mobile_link2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:18] "[36mGET /static/img/batch_user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:18] "[36mGET /static/img/batch_link.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 12:56:18] "[36mGET /static/img/login_help.png HTTP/1.1[0m" 304 -
