@@ -20,3 +20,33 @@ INFO:apscheduler.scheduler:Scheduler started
 DEBUG:apscheduler.scheduler:Looking for jobs to run
 DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-24 14:05:32.161121-08:00 (in 1799.996488 seconds)
 INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 13:35:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 13:35:45] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 13:35:45] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /peppity_pep/ HTTP/1.1" 200 35675
+DEBUG:requests.packages.urllib3.connectionpool:"GET /peppity_pep HTTP/1.1" 301 0
+DEBUG:requests.packages.urllib3.connectionpool:"GET /peppity_pep/ HTTP/1.1" 200 35675
+DEBUG:requests.packages.urllib3.connectionpool:"GET /peppity_pep/?__a=1 HTTP/1.1" 200 18333
+DEBUG:requests.packages.urllib3.connectionpool:"GET /graphql/query/?query_id=17888483320059182&id=6420483144&first=100&after= HTTP/1.1" 200 15197
+DEBUG:requests.packages.urllib3.connectionpool:"GET /p/Bbn40EfARlX/?__a=1 HTTP/1.1" 200 5768
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): scontent-sjc2-1.cdninstagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (2): scontent-sjc2-1.cdninstagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (3): scontent-sjc2-1.cdninstagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (4): scontent-sjc2-1.cdninstagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (5): scontent-sjc2-1.cdninstagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (6): scontent-sjc2-1.cdninstagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (7): scontent-sjc2-1.cdninstagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (8): scontent-sjc2-1.cdninstagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (9): scontent-sjc2-1.cdninstagram.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /graphql/query/?query_id=17888483320059182&id=6420483144&first=100&after=AQAENI6cVmpgu1XKqZ8pt9mmoo7vhaXskeDMXw9lOfy7ntPcVEfc-bAknoXozQB051k HTTP/1.1" 200 154
+DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23498618_129932671024017_4910869707940167680_n.jpg HTTP/1.1" 200 72378
+DEBUG:requests.packages.urllib3.connectionpool:"GET /vp/5a49ce7c72586cee0a6321daaa1f5250/5A1B2133/t50.2886-16/23662354_161535491125416_6770247619739385856_n.mp4 HTTP/1.1" 200 771514
+DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23596525_746428405563418_1570446493905584128_n.jpg HTTP/1.1" 200 171249
+DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23735372_134742670632274_3543345081442369536_n.jpg HTTP/1.1" 200 90485
+DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23734317_495633187489535_6850926952602140672_n.jpg HTTP/1.1" 200 108616
+DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23498826_1707479295950023_4566451096448401408_n.jpg HTTP/1.1" 200 78583
+DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23498053_155419221738882_2965471976388296704_n.jpg HTTP/1.1" 200 73663
+DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23594917_291390274700019_1910169142774726656_n.jpg HTTP/1.1" 200 229343
+DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23595842_1430283580413257_2050497977876742144_n.jpg HTTP/1.1" 200 143775
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 13:35:57] "[37mPOST /get-media HTTP/1.1[0m" 200 -
