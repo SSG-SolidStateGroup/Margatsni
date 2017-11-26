@@ -148,7 +148,7 @@ def get_graph_sidecar(target):
 	owner = json_text['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']['username'] + '_carousel'
 	zip_fname = owner + '.zip'
 	for edge in sidecar:
-		img_urls.applicationend(edge['node']['display_url'])
+		img_urls.append(edge['node']['display_url'])
 
 	dst = './downloads/' + owner
 	create_dir(dst)
