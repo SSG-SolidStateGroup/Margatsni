@@ -23,13 +23,13 @@
 
     <form class="container" name="user-link" action="/get-media" method="post">
         <input type="text" id="inputField" placeholder="'user', 'https://www.instagram.com/instagram/', or 'https://www.instagram.com/p/BbVLoAeBUo-/?taken-by=instagram' " name="target" autofocus>
-        <button type="submit" class="button" onclick(="clearField();">Get Media</button>
+        <button type="submit" class="button" onclick="clearField();">Get Media</button>
     </form>
 
     <!-- Script to clear the input bar for downloads -->
     <script type="text/javascript">
         function clearField() {
-            inputField.value = "'user', 'https://www.instagram.com/instagram/', or 'https://www.instagram.com/p/BbVLoAeBUo-/?taken-by=instagram' ";
+            document.getElementById("inputField").value = "'user', 'https://www.instagram.com/instagram/', or 'https://www.instagram.com/p/BbVLoAeBUo-/?taken-by=instagram' ";
         }
 
     </script>
