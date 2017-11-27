@@ -23,16 +23,15 @@
 
     <form class="container" name="user-link" action="/get-media" method="post">
         <input type="text" id="inputField" placeholder="'user', 'https://www.instagram.com/instagram/', or 'https://www.instagram.com/p/BbVLoAeBUo-/?taken-by=instagram' " name="target" autofocus>
-        <button type="submit" class="button" onclick="clearField();">Get Media</button>
+        <button type="submit" class="button">Get Media</button>
     </form>
 
     <!-- Script to clear the input bar for downloads -->
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         function clearField() {
             document.getElementById("inputField").value = " ";
         }
-
-    </script>
+    </script>-->
 
     {% if not session['logged_in'] %}
     <a class="button" href="{{url_for('login')}}">Login</a> {% else %}
