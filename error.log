@@ -50,3 +50,194 @@ DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23498053_15
 DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23594917_291390274700019_1910169142774726656_n.jpg HTTP/1.1" 200 229343
 DEBUG:requests.packages.urllib3.connectionpool:"GET /t51.2885-15/e35/23595842_1430283580413257_2050497977876742144_n.jpg HTTP/1.1" 200 143775
 INFO:werkzeug:127.0.0.1 - - [24/Nov/2017 13:35:57] "[37mPOST /get-media HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-25 23:14:32.036355-08:00 (in 1799.995987 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:44:34] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:44:34] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:44:35] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:44:36] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:44:36] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /p/Bb3ZSIvgKC7/?hl=en&taken-by=marutaro HTTP/1.1" 200 41956
+DEBUG:requests.packages.urllib3.connectionpool:"GET /p/Bb3ZSIvgKC7/?hl=en&taken-by=marutaro HTTP/1.1" 200 41958
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:44:38] "[1m[35mPOST /get-media HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:44:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:46:35] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:46:35] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2017 22:46:35] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-27 23:43:23.502985-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:23] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:24] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:24] "[33mGET /img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:36] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:36] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:36] "[33mGET /img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:36] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:41] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:41] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:41] "[33mGET /img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:13:41] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:14:46] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:14:46] "[33mGET /img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:20:30] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:20:30] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:20:30] "[33mGET /img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:20:30] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-27 23:50:39.110063-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:20:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:20:40] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:20:40] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:20:41] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:21:50] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:21:50] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:21:50] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:21:51] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-27 23:51:57.760725-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:21:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:00] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:00] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:00] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:02] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:11] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:12] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:12] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:12] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-27 23:52:36.854990-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:41] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:42] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:42] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:22:42] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:23:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:23:33] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:23:33] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:23:34] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-27 23:53:39.658400-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:23:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:23:43] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:23:43] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:23:43] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:37] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:37] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:38] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-27 23:54:43.519287-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:57] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:57] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:57] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:58] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:58] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:58] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:24:58] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:26:02] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:26:02] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:26:02] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:26:02] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-27 23:56:06.354764-08:00 (in 1799.995987 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:26:08] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:26:08] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:26:09] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:26:09] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:37] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:37] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:37] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-28 00:00:41.934342-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:44] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:44] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:44] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:45] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:45] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:46] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:30:46] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:00] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:00] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:00] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-28 00:01:05.279811-08:00 (in 1799.996488 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:09] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:10] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:10] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:17] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:17] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:17] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:17] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-28 00:01:50.418568-08:00 (in 1799.995987 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:51] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:51] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:52] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:31:52] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:32:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:32:58] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:32:58] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:32:58] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "wipe_dl_and_zip" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2017-11-28 00:03:03.222183-08:00 (in 1799.996990 seconds)
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:33:05] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:33:05] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2017 23:33:05] "[37mGET /static/favicon.png HTTP/1.1[0m" 200 -
