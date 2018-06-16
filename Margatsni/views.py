@@ -6,7 +6,7 @@ import os, requests, shutil, json, concurrent.futures, tqdm, re
 
 LOGIN_URL = "https://www.instagram.com/accounts/login/ajax/"
 logged_in = False
-api = InstagramScraper( media_types=['image','story', 'video'], maximum=10000 )
+api = InstagramScraper( media_types=['image','story', 'video'], maximum=1000 )
 
 '''------------------------------------------------------- page views ----------------------------------------------------'''
 
