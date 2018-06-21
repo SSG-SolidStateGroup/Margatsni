@@ -36,10 +36,6 @@ def login():
 			flash('Unsuccessful login.')
 	return render_template('login.html')
 
-@application.route('/help')
-def help():
-	return render_template('help.html')
-
 @application.route('/logout', methods=['GET', 'POST'])
 def logout():
 	global logged_in
