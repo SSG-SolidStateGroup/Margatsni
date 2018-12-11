@@ -1,4 +1,3 @@
-![Circle CI](https://circleci.com/gh/SSG-SolidStateGroup/Margatsni.png?circle-token=:circle-token) ![Circle CI](https://circleci.com/gh/SSG-SolidStateGroup/Margatsni.svg?style=shield&circle-token=:circle-token)
 
 # Margatsni
 
